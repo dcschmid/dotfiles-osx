@@ -71,3 +71,61 @@ Here I list all used plugins with links to the corresponding documentation.
 - [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)
 	luasnip completion source for nvim-cmp
 
+- [cmp-npm](https://github.com/David-Kunz/cmp-npm)
+	An additional source for nvim-cmp to autocomplete packages and its versions
+
+- [cmp-rg](https://github.com/lukas-reineke/cmp-rg)
+	ripgrep source for nvim-cmp
+
+- [cmp-spell](https://github.com/f3fora/cmp-spell)
+	spell source for nvim-cmp based on vim's spellsuggest
+
+- [cmp-git](https://github.com/petertriho/cmp-git)
+	Git source for nvim-cmp
+
+- [copilot.vim](https://github.com/github/copilot.vim)
+	Neovim plugin for GitHub Copilot
+
+- [copilot.lua](https://github.com/zbirenbaum/copilot.lua)
+	Lua plugin for starting and interacting with github copilot
+
+- [copilot-cmp](https://github.com/zbirenbaum/copilot-cmp)
+	Lua plugin to turn github copilot into a cmp source
+
+#### Telescope
+- [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+	Find, Filter, Preview, Pick. All lua, all the time.
+
+- [telescope-zf-native.nvim](https://github.com/natecraddock/telescope-zf-native.nvim)
+	native telescope bindings to zf for sorting results
+
+#### Git
+- [gh.nvim](https://github.com/ldelossa/gh.nvim)
+	A fully featured GitHub integration for performing code reviews in Neovim
+
+- [gitlinker.nvim](https://github.com/ruifm/gitlinker.nvim)
+	A lua neovim plugin to generate shareable file permalinks (with line ranges) for several git web frontend hosts.
+	Inspired by tpope/vim-fugitive's :GBrowse
+
+- [git.nvim](https://github.com/dinhhuy258/git.nvim)
+	git.nvim is the simple clone of the plugin vim-fugitive which is written in Lua.
+
+- [diffview.nvim](https://github.com/sindrets/diffview.nvim)
+	Single tabpage interface for easily cycling through diffs for all modified files for any git rev.
+
+- [git-conflict.nvim](https://github.com/akinsho/git-conflict.nvim)
+	A plugin to visualise and resolve merge conflicts in neovim
+
+#### Tools
+- [Comment.nvim](https://github.com/numToStr/Comment.nvim)
+	Smart and powerful comment plugin for neovim. Supports treesitter, dot repeat, left-right/up-down motions, hooks, and more
+
+- [sad.nvim](https://github.com/ray-x/sad.nvim)
+	Space Age seD in Neovim. A project-wide find and replace plugin for Neovim.
+
+- [jester](https://github.com/David-Kunz/jester)
+	A Neovim plugin to easily run and debug Jest tests
+
+- [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
+	Snippet Engine for Neovim written in Lua.
+

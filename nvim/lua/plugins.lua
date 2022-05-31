@@ -72,23 +72,26 @@ return require('packer').startup(function(use)
 		config = [[ require('plugins/cmp') ]],
 	}
 
-	use({ "petertriho/cmp-git", requires = "nvim-lua/plenary.nvim" }) -- Git source for nvim-cmp
+	use { -- Git source for nvim-cmp
+		'petertriho/cmp-git',
+		requires = 'nvim-lua/plenary.nvim'
+	}
 
-	use({ "github/copilot.vim" }) -- Neovim plugin for GitHub Copilot
+	use 'github/copilot.vim' -- Neovim plugin for GitHub Copilot
 
 	use { -- Lua plugin for starting and interacting with github copilot
-		"zbirenbaum/copilot.lua",
-		event = { "VimEnter" },
+		'zbirenbaum/copilot.lua',
+		event = { 'VimEnter' },
 		config = function()
 			vim.defer_fn(function()
-				require("copilot").setup()
+				require('copilot').setup()
 			end, 100)
 		end,
 	}
 
 	use { -- Lua plugin to turn github copilot into a cmp source
-		"zbirenbaum/copilot-cmp",
-		after = { "copilot.lua", "nvim-cmp" },
+		'zbirenbaum/copilot-cmp',
+		after = { 'copilot.lua', 'nvim-cmp' },
 	}
 
 
@@ -100,7 +103,7 @@ return require('packer').startup(function(use)
 		}
 	}
 
-	use "natecraddock/telescope-zf-native.nvim" -- native telescope bindings to zf for sorting results
+	use 'natecraddock/telescope-zf-native.nvim' -- native telescope bindings to zf for sorting results
 
 
 	-- git
