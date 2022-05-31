@@ -15,6 +15,8 @@ return require('packer').startup(function(use)
 		config = [[ require('plugins/lualine') ]]
 	}
 
+
+	-- Theme
 	use 'folke/tokyonight.nvim' -- A clean, dark Neovim theme written in Lua
 
 
@@ -26,18 +28,11 @@ return require('packer').startup(function(use)
 		config = [[ require('plugins/lspconfig') ]]
 	}
 
-	use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua.
-
 	use 'jose-elias-alvarez/nvim-lsp-ts-utils' -- Utilities to improve the TypeScript development experience for Neovim's built-in LSP client.
 
 	use { -- A pretty diagnostics, references, telescope results, quickfix and location list to help you solve all the trouble your code is causing.
 		"folke/trouble.nvim",
 		requires = "kyazdani42/nvim-web-devicons",
-	}
-
-	use { -- VSCode 💡 for neovim's built-in LSP.
-		'kosayoda/nvim-lightbulb',
-		config = [[ require('plugins/lightbulb') ]]
 	}
 
 	use { -- vscode-like pictograms for neovim lsp completion items.
@@ -49,12 +44,6 @@ return require('packer').startup(function(use)
 		'b0o/schemastore.nvim'
 	}
 
-	use { -- A small Neovim plugin for previewing definitions using floating windows.
-		'rmagatti/goto-preview',
-		config = function()
-			require('goto-preview').setup {}
-		end
-	}
 
 	-- Treesitter
 	use { -- Nvim Treesitter configurations and abstraction layer
@@ -62,6 +51,7 @@ return require('packer').startup(function(use)
 		run = ':TSUpdate',
 		config = [[ require('plugins/treesitter') ]]
 	}
+
 	use 'windwp/nvim-ts-autotag' -- Use treesitter to auto close and auto rename html tag
 
 
@@ -82,11 +72,11 @@ return require('packer').startup(function(use)
 		config = [[ require('plugins/cmp') ]],
 	}
 
-	use({ "petertriho/cmp-git", requires = "nvim-lua/plenary.nvim" })
+	use({ "petertriho/cmp-git", requires = "nvim-lua/plenary.nvim" }) -- Git source for nvim-cmp
 
-	use({ "github/copilot.vim" })
+	use({ "github/copilot.vim" }) -- Neovim plugin for GitHub Copilot
 
-	use {
+	use { -- Lua plugin for starting and interacting with github copilot
 		"zbirenbaum/copilot.lua",
 		event = { "VimEnter" },
 		config = function()
@@ -96,14 +86,14 @@ return require('packer').startup(function(use)
 		end,
 	}
 
-	use {
+	use { -- Lua plugin to turn github copilot into a cmp source
 		"zbirenbaum/copilot-cmp",
 		after = { "copilot.lua", "nvim-cmp" },
 	}
 
 
 	-- Telescope
-	use {
+	use { -- Find, Filter, Preview, Pick. All lua, all the time.
 		'nvim-telescope/telescope.nvim',
 		requires = {
 			'nvim-lua/plenary.nvim'
@@ -114,48 +104,55 @@ return require('packer').startup(function(use)
 
 
 	-- git
-	use {
+	use { -- Vim/Neovim plugin for GitHub
 		'ldelossa/gh.nvim',
 		requires = { { 'ldelossa/litee.nvim' } },
 		config = [[ require('plugins/gh') ]],
 	}
 
-	use {
+	use { -- A lua neovim plugin to generate shareable file permalinks (with line ranges) for several git web frontend hosts.
 		'ruifm/gitlinker.nvim',
 		requires = 'nvim-lua/plenary.nvim',
 		require "gitlinker".setup()
 	}
 
-	use {
+	use { -- git.nvim is the simple clone of the plugin vim-fugitive which is written in Lua.
 		'dinhhuy258/git.nvim',
 		config = [[ require('plugins/git') ]],
 	}
 
-	use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+	use { -- Single tabpage interface for easily cycling through diffs for all modified files for any git rev.
+		'sindrets/diffview.nvim',
+		requires = 'nvim-lua/plenary.nvim'
+	}
 
-	use { 'akinsho/git-conflict.nvim', config = function()
-		require('git-conflict').setup()
-	end }
+	use { -- A plugin to visualise and resolve merge conflicts in neovim
+		'akinsho/git-conflict.nvim',
+		config = function()
+			require('git-conflict').setup()
+		end
+	}
 
 
 	-- Tools
-	use {
+	use { -- Smart and powerful comment plugin for neovim. Supports treesitter, dot repeat, left-right/up-down motions, hooks, and more
 		'numToStr/Comment.nvim',
 		config = function()
 			require('Comment').setup()
 		end
 	}
 
-	use {
+	use { -- About Space Age seD in Neovim. A project-wide find and replace plugin for Neovim.
 		'ray-x/sad.nvim',
 		requires = 'ray-x/guihua.lua',
 		config = [[ require('plugins/sad') ]],
 	}
 
-	use {
+	use { -- A Neovim plugin to easily run and debug Jest tests
 		'David-Kunz/jester',
 		config = [[ require('plugins/jester') ]],
 	}
+
 
 	-- Snippets
 	use { -- Snippet Engine for Neovim written in Lua.
