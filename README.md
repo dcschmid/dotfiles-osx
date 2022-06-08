@@ -6,8 +6,72 @@ My new dotfiles for OSX
 This is my actually neovim configuration, what I am using for private and working development. You can use it as a base for
 your own neovim configuration.
 
-### Used Plugins
+### Shortcuts
+Leader key = , (Comma)
 
+#### Basic
+| Shortcut      | Functionality                                   |
+| ------------- | ----------------------------------------------- |
+| leader + w    |  fast saving                                    |
+| -             |  open netrw file explorer                       |
+| leader + ba   |  close all the buffers		                      |
+
+#### Split Management
+| Shortcut      | Functionality                                   |
+| ------------- | ----------------------------------------------- |
+| leader + v    |  open a vertical split                          |
+| control + h   |  move to the left split                         |
+| control + l   |  move to the right split                        |
+| control + j   |  move to the top split                          |
+| control + k   |  move to the bottom split                       |
+
+#### Search
+| Shortcut						| Functionality                                   |
+| ------------------- | ----------------------------------------------- |
+| space								|  search                                         |
+| control + space     |  backward search                                |
+| leader + space      |  remove search highlights                       |
+
+#### Search
+| Shortcut						| Functionality                                   |
+| ------------------- | ----------------------------------------------- |
+| space								|  search                                         |
+| control + space     |  backward search                                |
+| leader + space      |  remove search highlights                       |
+
+#### Tab Management
+| Shortcut						| Functionality                                   |
+| ------------------- | ----------------------------------------------- |
+| leader + nt					|  open new tab                                   |
+| leader + to					|  close other tabs                               |
+| leader + tc					|  close actual tab					                      |
+| leader + tp					|  switch to previous tab			 	                  |
+| leader + tn					|  switch to next tab						                  |
+| leader + tl					|  toggle between this and the last accessed tab	|
+
+#### Telescope
+| Shortcut						| Functionality																																						|
+| ------------------- | --------------------------------------------------------------------------------------- |
+| control + p					|  Lists files in your current working directory																					|
+| control + g					|  Fuzzy search through the output of git ls-files command																|
+| leader + fg					|	 Search for a string in your current working directory and get results live as you type	|
+| leader + g					|  Searches for the string under your cursor in your current working directory						|
+| ;										|  Lists open buffers in current neovim instance																					|
+
+#### Trouble
+| Shortcut						| Functionality																																						|
+| ------------------- | --------------------------------------------------------------------------------------- |
+| leader + xx					|  toggle Trouble window																																	|
+| leader + xr					|  refresh the active list																																|
+| leader + xw					|	 switch to workspace diagnostics from the builtin LSP client														|
+| leader + xd					|  switch to document diagnostics from the builtin LSP client															|
+
+#### ESLint
+| Shortcut						| Functionality																																						|
+| ------------------- | --------------------------------------------------------------------------------------- |
+| leader + el					|  run EslintFixAll																																				|
+
+### Used Pluginss
 Here I list all used plugins with links to the corresponding documentation.
 
 #### Plugin Management
