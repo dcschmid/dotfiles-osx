@@ -32,13 +32,6 @@ Leader key = , (Comma)
 | control + space     |  backward search                                |
 | leader + space      |  remove search highlights                       |
 
-#### Search
-| Shortcut						| Functionality                                   |
-| ------------------- | ----------------------------------------------- |
-| space								|  search                                         |
-| control + space     |  backward search                                |
-| leader + space      |  remove search highlights                       |
-
 #### Tab Management
 | Shortcut						| Functionality                                   |
 | ------------------- | ----------------------------------------------- |
