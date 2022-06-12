@@ -81,6 +81,9 @@ Leader key = , (Comma)
 | space + ca					|  Selects a code action available at the current cursor position.												|
 | gr									|  Lists all the references to the symbol under the cursor in the quickfix window.				|
 | space + f 					|  Formats the current buffer																															|
+| leader + gs 				|  Organize imports in TypeScript Files																										|
+| leader + gi 				|  Rename TypeScript file and update imports																							|
+| leader + go 				|  Import all missing imports in TS Files																									|
 
 
 ### Used Pluginss
