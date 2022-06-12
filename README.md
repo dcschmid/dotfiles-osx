@@ -64,6 +64,25 @@ Leader key = , (Comma)
 | ------------------- | --------------------------------------------------------------------------------------- |
 | leader + el					|  run EslintFixAll																																				|
 
+#### LSP
+| Shortcut						| Functionality																																						|
+| ------------------- | --------------------------------------------------------------------------------------- |
+| space + e					  |  Show diagnostics in a floating window.																									|
+| [ + d					      |  Move to the previous diagnostic in the current buffer.																	|
+| ] + d					      |  Move to the next diagnostic.																														|
+| space + q					  |  Add buffer diagnostics to the location list.																						|
+| g + D								|  Jumps to the declaration of the symbol under the cursor.																|
+| g + d								|  Jumps to the definition of the symbol under the cursor.																|
+| K										|  Displays hover information about the symbol under the cursor in a floating window. 		|
+| gi									|  Lists all the implementations for the symbol under the cursor in the quickfix window. 	|
+| control + k					|  Displays signature information about the symbol under the cursor in a floating window. |
+| space + d						|  Jumps to the definition of the type of the symbol under the cursor.										|
+| space + rn					|  Renames all references to the symbol under the cursor.																	|
+| space + ca					|  Selects a code action available at the current cursor position.												|
+| gr									|  Lists all the references to the symbol under the cursor in the quickfix window.				|
+| space + f 					|  Formats the current buffer																															|
+
+
 ### Used Pluginss
 Here I list all used plugins with links to the corresponding documentation.
 
