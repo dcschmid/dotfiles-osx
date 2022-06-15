@@ -99,7 +99,8 @@ return require('packer').startup(function(use)
 	use { -- Find, Filter, Preview, Pick. All lua, all the time.
 		'nvim-telescope/telescope.nvim',
 		requires = {
-			'nvim-lua/plenary.nvim'
+			'nvim-lua/plenary.nvim',
+			'nvim-telescope/telescope-project.nvim'
 		}
 	}
 
@@ -153,7 +154,6 @@ return require('packer').startup(function(use)
 		'David-Kunz/jester',
 		config = [[ require('plugins/jester') ]],
 	}
-
 
 	-- Snippets
 	use { -- Snippet Engine for Neovim written in Lua.

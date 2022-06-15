@@ -199,7 +199,7 @@ Here I list all used plugins with links to the corresponding documentation.
 - [Comment.nvim](https://github.com/numToStr/Comment.nvim)
 	Smart and powerful comment plugin for neovim. Supports treesitter, dot repeat, left-right/up-down motions, hooks, and more
 
-- [sad.nvim](https://github.com/ray-x/sad.nvim)
+- [nvim-spectre](https://github.com/nvim-pack/nvim-spectre)
 	Space Age seD in Neovim. A project-wide find and replace plugin for Neovim.
 
 - [jester](https://github.com/David-Kunz/jester)
