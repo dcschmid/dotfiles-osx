@@ -100,7 +100,6 @@ return require('packer').startup(function(use)
 		'nvim-telescope/telescope.nvim',
 		requires = {
 			'nvim-lua/plenary.nvim',
-			'nvim-telescope/telescope-project.nvim'
 		}
 	}
 
@@ -109,12 +108,6 @@ return require('packer').startup(function(use)
 
 
 	-- git
-	use { -- Vim/Neovim plugin for GitHub
-		'ldelossa/gh.nvim',
-		requires = { { 'ldelossa/litee.nvim' } },
-		config = [[ require('plugins/gh') ]],
-	}
-
 	use { -- A lua neovim plugin to generate shareable file permalinks (with line ranges) for several git web frontend hosts.
 		'ruifm/gitlinker.nvim',
 		requires = 'nvim-lua/plenary.nvim',
