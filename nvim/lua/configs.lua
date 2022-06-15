@@ -53,6 +53,7 @@ set.laststatus     = 2 -- always show status line
 set.hidden         = true -- allows you to hide buffers with unsaved changes without being prompted
 set.inccommand     = 'split' -- live preview of :s results
 set.shell          = 'zsh' -- shell to use for `!`, `:!`, `system()` etc.
+set.swapfile       = false
 g.mapleader        = "," -- set mapleader key to ,
 g.netrw_banner     = 0 -- remove directory banner in netrw
 g.lasttab          = 1
@@ -85,6 +86,8 @@ k("n", "<leader>xr", "<cmd>TroubleRefresh<cr>", { silent = true, noremap = true 
 k("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", { silent = true, noremap = true }) -- switch to document diagnostics from the builtin LSP client
 k("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", { silent = true, noremap = true }) -- switch to workspace diagnostics from the builtin LSP client
 k("n", "<leader>el", "<cmd>EslintFixAll<CR>", { silent = true, noremap = true })
+k("n", "<leader>s", "<cmd>lua require('spectre').open()<CR>", { silent = true, noremap = true }) -- open spectre
+k("n", "<leader>sw", "<cmd>lua require('spectre').open_visual({select_word=true})<CR>", { silent = true, noremap = true }) -- search current word
 
 
 -- highlight on yank

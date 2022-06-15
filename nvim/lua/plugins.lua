@@ -103,7 +103,8 @@ return require('packer').startup(function(use)
 		}
 	}
 
-	use 'natecraddock/telescope-zf-native.nvim' -- native telescope bindings to zf for sorting results
+	-- FZF sorter for telescope written in c
+	use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
 
 	-- git
@@ -145,11 +146,8 @@ return require('packer').startup(function(use)
 		end
 	}
 
-	use { -- About Space Age seD in Neovim. A project-wide find and replace plugin for Neovim.
-		'ray-x/sad.nvim',
-		requires = 'ray-x/guihua.lua',
-		config = [[ require('plugins/sad') ]],
-	}
+	-- Find the enemy and replace them with dark power.
+	use 'windwp/nvim-spectre'
 
 	use { -- A Neovim plugin to easily run and debug Jest tests
 		'David-Kunz/jester',
@@ -165,6 +163,7 @@ return require('packer').startup(function(use)
 		},
 		config = [[ require('plugins/luasnip') ]],
 	}
+
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
