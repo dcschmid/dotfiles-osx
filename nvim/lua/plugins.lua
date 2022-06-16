@@ -148,6 +148,43 @@ return require('packer').startup(function(use)
 		config = [[ require('plugins/jester') ]],
 	}
 
+	use({ -- Simple session management for Neovim with git branching, autosave/autoload and Telescope support
+		"olimorris/persisted.nvim",
+		config = function()
+			require("persisted").setup({
+				use_git_branch = true, -- create session files based on the branch of the git enabled repository
+				autosave = true, -- automatically save session files when exiting Neovim
+				autoload = true, -- automatically load the session for the cwd on Neovim startup
+			})
+			require("telescope").load_extension("persisted") -- To load the telescope extension
+		end,
+	})
+
+	--  A NeoVim plugin for saving your work before the world collapses or you type :qa!
+	use {
+		'Pocco81/AutoSave.nvim',
+		config = [[ require('plugins/autosave') ]],
+	}
+
+	-- Sorting plugin for Neovim that supports line-wise and delimiter sorting.
+	use({
+		'sQVe/sort.nvim',
+
+		-- Optional setup for overriding defaults.
+		config = function()
+			require("sort").setup({
+				-- Input configuration here.
+				-- Refer to the configuration section below for options.
+			})
+		end
+	})
+
+	-- EditorConfig plugin for Neovim
+	use 'gpanders/editorconfig.nvim'
+
+	-- Auto-Focusing and Auto-Resizing Splits/Windows for Neovim
+	use { "beauwilliams/focus.nvim", config = function() require("focus").setup() end }
+
 	-- Snippets
 	use { -- Snippet Engine for Neovim written in Lua.
 		'L3MON4D3/LuaSnip',

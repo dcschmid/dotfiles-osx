@@ -1,10 +1,7 @@
 local exec = vim.api.nvim_exec -- execute Vimscript
 local set  = vim.opt -- global options
 local cmd  = vim.cmd -- execute Vim commands
-local fn   = vim.fn -- call Vim functions
 local g    = vim.g -- global variables
-local b    = vim.bo -- buffer-scoped options
-local w    = vim.wo -- windows-scoped options
 local k    = vim.api.nvim_set_keymap -- set global keymaps
 
 cmd('autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=grey') --to Show whitespace, MUST be inserted BEFORE the colorscheme command
@@ -88,6 +85,7 @@ k("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", { silent = t
 k("n", "<leader>el", "<cmd>EslintFixAll<CR>", { silent = true, noremap = true })
 k("n", "<leader>s", "<cmd>lua require('spectre').open()<CR>", { silent = true, noremap = true }) -- open spectre
 k("n", "<leader>sw", "<cmd>lua require('spectre').open_visual({select_word=true})<CR>", { silent = true, noremap = true }) -- search current word
+k("n", "<leader>sm", "<cmd>Telescope persisted<CR>", { silent = true, noremap = true }) -- search current word
 
 
 -- highlight on yank

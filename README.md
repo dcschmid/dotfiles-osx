@@ -12,52 +12,52 @@ Leader key = , (Comma)
 #### Basic
 | Shortcut      | Functionality                                   |
 | ------------- | ----------------------------------------------- |
-| leader + w    |  fast saving                                    |
 | -             |  open netrw file explorer                       |
 | leader + ba   |  close all the buffers		                      |
+| leader + w    |  fast saving                                    |
 
 #### Split Management
 | Shortcut      | Functionality                                   |
 | ------------- | ----------------------------------------------- |
-| leader + v    |  open a vertical split                          |
 | control + h   |  move to the left split                         |
-| control + l   |  move to the right split                        |
 | control + j   |  move to the top split                          |
 | control + k   |  move to the bottom split                       |
+| control + l   |  move to the right split                        |
+| leader + v    |  open a vertical split                          |
 
 #### Search
 | Shortcut						| Functionality                                   |
 | ------------------- | ----------------------------------------------- |
-| space								|  search                                         |
 | control + space     |  backward search                                |
 | leader + space      |  remove search highlights                       |
+| space								|  search                                         |
 
 #### Tab Management
 | Shortcut						| Functionality                                   |
 | ------------------- | ----------------------------------------------- |
 | leader + nt					|  open new tab                                   |
-| leader + to					|  close other tabs                               |
 | leader + tc					|  close actual tab					                      |
-| leader + tp					|  switch to previous tab			 	                  |
-| leader + tn					|  switch to next tab						                  |
 | leader + tl					|  toggle between this and the last accessed tab	|
+| leader + tn					|  switch to next tab						                  |
+| leader + to					|  close other tabs                               |
+| leader + tp					|  switch to previous tab			 	                  |
 
 #### Telescope
 | Shortcut						| Functionality																																						|
 | ------------------- | --------------------------------------------------------------------------------------- |
-| control + p					|  Lists files in your current working directory																					|
+| ;										|  Lists open buffers in current neovim instance																					|
 | control + g					|  Fuzzy search through the output of git ls-files command																|
+| control + p					|  Lists files in your current working directory																					|
 | leader + fg					|	 Search for a string in your current working directory and get results live as you type	|
 | leader + g					|  Searches for the string under your cursor in your current working directory						|
-| ;										|  Lists open buffers in current neovim instance																					|
 
 #### Trouble
 | Shortcut						| Functionality																																						|
 | ------------------- | --------------------------------------------------------------------------------------- |
-| leader + xx					|  toggle Trouble window																																	|
+| leader + xd					|  switch to document diagnostics from the builtin LSP client															|
 | leader + xr					|  refresh the active list																																|
 | leader + xw					|	 switch to workspace diagnostics from the builtin LSP client														|
-| leader + xd					|  switch to document diagnostics from the builtin LSP client															|
+| leader + xx					|  toggle Trouble window																																	|
 
 #### ESLint
 | Shortcut						| Functionality																																						|
@@ -67,23 +67,23 @@ Leader key = , (Comma)
 #### LSP
 | Shortcut						| Functionality																																						|
 | ------------------- | --------------------------------------------------------------------------------------- |
-| space + e					  |  Show diagnostics in a floating window.																									|
+| K										|  Displays hover information about the symbol under the cursor in a floating window. 		|
 | [ + d					      |  Move to the previous diagnostic in the current buffer.																	|
 | ] + d					      |  Move to the next diagnostic.																														|
-| space + q					  |  Add buffer diagnostics to the location list.																						|
-| g + D								|  Jumps to the declaration of the symbol under the cursor.																|
-| g + d								|  Jumps to the definition of the symbol under the cursor.																|
-| K										|  Displays hover information about the symbol under the cursor in a floating window. 		|
-| gi									|  Lists all the implementations for the symbol under the cursor in the quickfix window. 	|
 | control + k					|  Displays signature information about the symbol under the cursor in a floating window. |
-| space + d						|  Jumps to the definition of the type of the symbol under the cursor.										|
-| space + rn					|  Renames all references to the symbol under the cursor.																	|
-| space + ca					|  Selects a code action available at the current cursor position.												|
+| gD							  	|  Jumps to the declaration of the symbol under the cursor.																|
+| gd								  |  Jumps to the definition of the symbol under the cursor.																|
+| gi									|  Lists all the implementations for the symbol under the cursor in the quickfix window. 	|
 | gr									|  Lists all the references to the symbol under the cursor in the quickfix window.				|
-| space + f 					|  Formats the current buffer																															|
-| leader + gs 				|  Organize imports in TypeScript Files																										|
 | leader + gi 				|  Rename TypeScript file and update imports																							|
 | leader + go 				|  Import all missing imports in TS Files																									|
+| leader + gs 				|  Organize imports in TypeScript Files																										|
+| space + ca					|  Selects a code action available at the current cursor position.												|
+| space + d						|  Jumps to the definition of the type of the symbol under the cursor.										|
+| space + e					  |  Show diagnostics in a floating window.																									|
+| space + f 					|  Formats the current buffer																															|
+| space + q					  |  Add buffer diagnostics to the location list.																						|
+| space + rn					|  Renames all references to the symbol under the cursor.																	|
 
 
 ### Used Pluginss
@@ -175,13 +175,10 @@ Here I list all used plugins with links to the corresponding documentation.
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 	Find, Filter, Preview, Pick. All lua, all the time.
 
-- [telescope-zf-native.nvim](https://github.com/natecraddock/telescope-zf-native.nvim)
-	native telescope bindings to zf for sorting results
+- [nvim-telescope/telescope-fzf-native.nvim](https://github.com/nvim-telescope/telescope-fzf-native.nvim)
+	FZF sorter for telescope written in c
 
 #### Git
-- [gh.nvim](https://github.com/ldelossa/gh.nvim)
-	A fully featured GitHub integration for performing code reviews in Neovim
-
 - [gitlinker.nvim](https://github.com/ruifm/gitlinker.nvim)
 	A lua neovim plugin to generate shareable file permalinks (with line ranges) for several git web frontend hosts.
 	Inspired by tpope/vim-fugitive's :GBrowse
@@ -200,10 +197,25 @@ Here I list all used plugins with links to the corresponding documentation.
 	Smart and powerful comment plugin for neovim. Supports treesitter, dot repeat, left-right/up-down motions, hooks, and more
 
 - [nvim-spectre](https://github.com/nvim-pack/nvim-spectre)
-	Space Age seD in Neovim. A project-wide find and replace plugin for Neovim.
+	Find the enemy and replace them with dark power.
 
 - [jester](https://github.com/David-Kunz/jester)
 	A Neovim plugin to easily run and debug Jest tests
+
+- [persisted.nvim](https://github.com/olimorris/persisted.nvim)
+	Simple session management for Neovim with git branching, autosave/autoload and Telescope support
+
+- [AutoSave.nvim](https://github.com/Pocco81/AutoSave.nvim)
+	A NeoVim plugin for saving your work before the world collapses or you type :qa!
+
+- [sort.nvim](https://github.com/sQVe/sort.nvim)
+	Sorting plugin for Neovim that supports line-wise and delimiter sorting.
+
+- [editorconfig.nvim](https://github.com/gpanders/editorconfig.nvim)
+	EditorConfig plugin for Neovim
+
+- [focus.nvim](https://github.com/beauwilliams/focus.nvim)
+	Auto-Focusing and Auto-Resizing Splits/Windows for Neovim
 
 - [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
 	Snippet Engine for Neovim written in Lua.
