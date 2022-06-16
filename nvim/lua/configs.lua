@@ -57,11 +57,10 @@ g.lasttab          = 1
 
 -- keymaps
 k('n', '<leader>w', [[:w!<CR>]], { noremap = true, silent = true }) -- Fast saving
-k('n', '<leader>v', [[:vsplit<CR>]], { noremap = true, silent = true }) -- Open vertical split
-k('n', '<C-h>', [[<C-w>h]], { noremap = true, silent = true }) -- Ctrl + h to move to the left splits
-k('n', '<C-l>', [[<C-w>l]], { noremap = true, silent = true }) -- Ctrl + l to move to the right one
-k('n', '<C-j>', [[<C-w><C-j>]], { noremap = true, silent = true }) -- Ctrl + j to move to the top one
-k('n', '<C-k>', [[<C-w><C-k>]], { noremap = true, silent = true }) -- Ctrl + k to move to the bottom one
+k('n', '<C-h>', [[:FocusSplitLeft<CR>]], { noremap = true, silent = true }) -- Ctrl + h to move to the left split
+k('n', '<C-l>', [[:FocusSplitRight<CR>]], { noremap = true, silent = true }) -- Ctrl + l to move to the right one
+k('n', '<C-j>', [[:FocusSplitUp<CR>]], { noremap = true, silent = true }) -- Ctrl + j to move to the top one
+k('n', '<C-k>', [[:FocusSplitDown<CR>]], { noremap = true, silent = true }) -- Ctrl + k to move to the bottom one
 k('n', '<space>', [[/]], { noremap = true, silent = true }) -- search
 k('n', '<C-space>', [[?]], { noremap = true, silent = true }) -- backward search
 k('n', '<leader><space>', [[:nohlsearch<CR>]], { noremap = true, silent = true }) -- remove search highlight
@@ -86,6 +85,7 @@ k("n", "<leader>el", "<cmd>EslintFixAll<CR>", { silent = true, noremap = true })
 k("n", "<leader>s", "<cmd>lua require('spectre').open()<CR>", { silent = true, noremap = true }) -- open spectre
 k("n", "<leader>sw", "<cmd>lua require('spectre').open_visual({select_word=true})<CR>", { silent = true, noremap = true }) -- search current word
 k("n", "<leader>sm", "<cmd>Telescope persisted<CR>", { silent = true, noremap = true }) -- search current word
+k("v", "<leader>so", "<Esc><cmd>Sort<CR>", { silent = true, noremap = true }) -- search current word
 
 
 -- highlight on yank

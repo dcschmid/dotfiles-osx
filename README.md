@@ -17,13 +17,12 @@ Leader key = , (Comma)
 | leader + w    |  fast saving                                    |
 
 #### Split Management
-| Shortcut      | Functionality                                   |
-| ------------- | ----------------------------------------------- |
-| control + h   |  move to the left split                         |
-| control + j   |  move to the top split                          |
-| control + k   |  move to the bottom split                       |
-| control + l   |  move to the right split                        |
-| leader + v    |  open a vertical split                          |
+| Shortcut      | Functionality                                                                                                  |
+| ------------- | -------------------------------------------------------------------------------------------------------------- |
+| control + h   |  Move to existing or create a new split to the left of your current window + open file or custom command       |
+| control + j   |  Move to existing or create a new split to the top of your current window + open file or custom command        |
+| control + k   |  Move to existing or create a new split to the bottom of your current window + open file or custom command     |
+| control + l   |  Move to existing or create a new split to the right of your current window + open file or custom command      |
 
 #### Search
 | Shortcut						| Functionality                                   |
@@ -59,10 +58,6 @@ Leader key = , (Comma)
 | leader + xw					|	 switch to workspace diagnostics from the builtin LSP client														|
 | leader + xx					|  toggle Trouble window																																	|
 
-#### ESLint
-| Shortcut						| Functionality																																						|
-| ------------------- | --------------------------------------------------------------------------------------- |
-| leader + el					|  run EslintFixAll																																				|
 
 #### LSP
 | Shortcut						| Functionality																																						|
@@ -84,6 +79,45 @@ Leader key = , (Comma)
 | space + f 					|  Formats the current buffer																															|
 | space + q					  |  Add buffer diagnostics to the location list.																						|
 | space + rn					|  Renames all references to the symbol under the cursor.																	|
+
+#### Comment
+| Shortcut						| Functionality																																						|
+| ------------------- | --------------------------------------------------------------------------------------- |
+| gb									| Toggles the region using blockwise comment in visual mode			      										|
+| gbc									| Toggles the current line using blockwise comment in normal mode													|
+| gc									| Toggles the region using linewise comment in visual mode      													|
+| gcc									| Toggles the current line using linewise comment in normal mode													|
+
+#### Git
+| Shortcut						| Functionality																																						|
+| ------------------- | --------------------------------------------------------------------------------------- |
+| :DiffviewClose	    | Close the current diffview. You can also use :tabclose																	|
+| :DiffviewFileHistory| Opens a new file history view that lists all commits that affected the given paths.			|
+| :DiffviewOpen	      | Open Git Diffview	Tab																					      										|
+| :DiffviewRefresh	  | Update stats and entries in the file list of the current Diffview												|
+| :Git								| run git command in terminal, Eg: :Git checkout -b test																	|
+| :GitConflictListQf	| Show all conflicted files in quickfix window									      										|
+| c0									| Select both none of the changes																      										|
+| cb									| Select both changes																						      										|
+| co									| Select the current changes				                  					      										|
+| ct									| Select the incoming changes																		      										|
+| leader + gR				  | Revert the current file to the specific commit																					|
+| leader + gb					| Open blame window																																				|
+| leader + gd				  | Opens a new diff that compares against the current index																|
+| leader + gn				  | Create a pull request with the target branch is set in the `target_branch` option				|
+| leader + go				  | Open file/folder in git repository																											|
+| leader + gp				  | Open pull request of the current branch																									|
+| leader + gr				  | Revert to the specific commit																														|
+| leader + gy				  | generate shareable file permalinks (with line ranges)																		|
+
+#### Tools
+| Shortcut						| Functionality																																						|
+| ------------------- | --------------------------------------------------------------------------------------- |
+| leader + el					|  run EslintFixAll																																				|
+| leader + s					|  open search panel    																																	|
+| leader + sm					|  open saved session list																																|
+| leader + so					|  sort visual selection																																	|
+| leader + sw					|  search for selected word    																														|
 
 
 ### Used Pluginss
@@ -200,13 +234,10 @@ Here I list all used plugins with links to the corresponding documentation.
 	Find the enemy and replace them with dark power.
 
 - [jester](https://github.com/David-Kunz/jester)
-	A Neovim plugin to easily run and debug Jest tests
+	A Neovim plugin to easily run and debug Jest test
 
 - [persisted.nvim](https://github.com/olimorris/persisted.nvim)
 	Simple session management for Neovim with git branching, autosave/autoload and Telescope support
-
-- [AutoSave.nvim](https://github.com/Pocco81/AutoSave.nvim)
-	A NeoVim plugin for saving your work before the world collapses or you type :qa!
 
 - [sort.nvim](https://github.com/sQVe/sort.nvim)
 	Sorting plugin for Neovim that supports line-wise and delimiter sorting.

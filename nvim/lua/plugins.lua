@@ -143,7 +143,7 @@ return require('packer').startup(function(use)
 	-- Find the enemy and replace them with dark power.
 	use 'windwp/nvim-spectre'
 
-	use { -- A Neovim plugin to easily run and debug Jest tests
+	use { -- A Neovim plugin to easily run and debug Jest test
 		'David-Kunz/jester',
 		config = [[ require('plugins/jester') ]],
 	}
@@ -155,16 +155,22 @@ return require('packer').startup(function(use)
 				use_git_branch = true, -- create session files based on the branch of the git enabled repository
 				autosave = true, -- automatically save session files when exiting Neovim
 				autoload = true, -- automatically load the session for the cwd on Neovim startup
+				command = "VimLeavePre",
+				telescope = {
+					before_source = function()
+						-- Close all open buffers
+						pcall(vim.cmd, "bufdo bwipeout")
+					end,
+					after_source = function(session)
+						-- Change the git branch
+						pcall(vim.cmd, "git checkout " .. session.branch)
+					end,
+				},
 			})
 			require("telescope").load_extension("persisted") -- To load the telescope extension
 		end,
 	})
 
-	--  A NeoVim plugin for saving your work before the world collapses or you type :qa!
-	use {
-		'Pocco81/AutoSave.nvim',
-		config = [[ require('plugins/autosave') ]],
-	}
 
 	-- Sorting plugin for Neovim that supports line-wise and delimiter sorting.
 	use({
