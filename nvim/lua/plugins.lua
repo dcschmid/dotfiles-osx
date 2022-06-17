@@ -191,6 +191,9 @@ return require('packer').startup(function(use)
 	-- Auto-Focusing and Auto-Resizing Splits/Windows for Neovim
 	use { "beauwilliams/focus.nvim", config = function() require("focus").setup() end }
 
+	-- A simple wrapper around git worktree operations, create, switch, and delete.
+	use { 'ThePrimeagen/git-worktree.nvim' }
+
 	-- Snippets
 	use { -- Snippet Engine for Neovim written in Lua.
 		'L3MON4D3/LuaSnip',

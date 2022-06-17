@@ -108,6 +108,8 @@ Leader key = , (Comma)
 | leader + go				  | Open file/folder in git repository																											|
 | leader + gp				  | Open pull request of the current branch																									|
 | leader + gr				  | Revert to the specific commit																														|
+| leader + gw				  | To bring up the telescope window listing your workspaces																|
+| leader + gwn				| To bring up the telescope window to create a new worktree																|
 | leader + gy				  | generate shareable file permalinks (with line ranges)																		|
 
 #### Tools
@@ -225,6 +227,9 @@ Here I list all used plugins with links to the corresponding documentation.
 
 - [git-conflict.nvim](https://github.com/akinsho/git-conflict.nvim)
 	A plugin to visualise and resolve merge conflicts in neovim
+
+- [git-worktree.nvim](https://github.com/ThePrimeagen/git-worktree.nvim)
+	A simple wrapper around git worktree operations, create, switch, and delete.
 
 #### Tools
 - [Comment.nvim](https://github.com/numToStr/Comment.nvim)

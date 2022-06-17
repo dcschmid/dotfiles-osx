@@ -86,7 +86,10 @@ k("n", "<leader>s", "<cmd>lua require('spectre').open()<CR>", { silent = true, n
 k("n", "<leader>sw", "<cmd>lua require('spectre').open_visual({select_word=true})<CR>", { silent = true, noremap = true }) -- search current word
 k("n", "<leader>sm", "<cmd>Telescope persisted<CR>", { silent = true, noremap = true }) -- search current word
 k("v", "<leader>so", "<Esc><cmd>Sort<CR>", { silent = true, noremap = true }) -- search current word
-
+k("n", "<leader>gw", "[[:lua require('telescope').extensions.git_worktree.git_worktrees()<CR>]]",
+	{ silent = true, noremap = true }) -- search current word
+k("n", "<leader>gwn", "[[:lua require('telescope').extensions.git_worktree.create_git_worktree()<CR>]]",
+	{ silent = true, noremap = true }) -- search current word
 
 -- highlight on yank
 exec([[
