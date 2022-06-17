@@ -1,6 +1,6 @@
 # Neovim
 
-![Screenshot Neovim](https://github.com/dcschmid/dotfiles-osx/blob/master/screenshots/neovim.png  "Neovim")
+![Screenshot Neovim](https://github.com/dcschmid/dotfiles-osx/blob/main/screenshots/neovim.png  "Neovim")
 
 This is my actually neovim configuration, what I am using for private and working development. You can use it as a base for
 your own neovim configuration.
