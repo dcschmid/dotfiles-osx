@@ -1,7 +1,7 @@
 # dotfiles-osx
 My new dotfiles for OSX
 
-## Wezterm
+## WezTerm
 
 WezTerm is a GPU-accelerated cross-platform terminal emulator and multiplexer implemented in Rust
 
@@ -11,7 +11,7 @@ WezTerm is a GPU-accelerated cross-platform terminal emulator and multiplexer im
 - Ligatures, Color Emoji and font fallback, with true color and dynamic color schemes.
 - Hyperlinks
 
-### How to Install
+### How to install
 
 ```bash
 $ brew tap wez/wezterm
@@ -24,6 +24,14 @@ $ brew install --cask wez/wezterm/wezterm
 
 This is my actually neovim configuration, what I am using for private and working development. You can use it as a base for
 your own neovim configuration.
+
+### How to install
+
+```
+$ brew install git curl wget neovim lua-language-server ripgrep fd fzf gnu-sed cmake rust-analyser gh go ms-jpq/sad/sad git-delta eslint
+
+$(brew --prefix)/opt/fzf/install
+```
 
 ### Shortcuts
 Leader key = , (Comma)
