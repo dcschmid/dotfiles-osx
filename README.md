@@ -1,7 +1,26 @@
 # dotfiles-osx
 My new dotfiles for OSX
 
+## Wezterm
+
+WezTerm is a GPU-accelerated cross-platform terminal emulator and multiplexer implemented in Rust
+
+### Features
+
+- Multiplex terminal panes, tabs and windows on local and remote hosts, with native mouse and scrollback
+- Ligatures, Color Emoji and font fallback, with true color and dynamic color schemes.
+- Hyperlinks
+
+### How to Install
+
+```bash
+$ brew tap wez/wezterm
+$ brew install --cask wez/wezterm/wezterm
+```
+
 ## Neovim
+
+![Screenshot Neovim](https://github.com/dcschmid/dotfiles-osx/blob/main/screenshots/neovim.png  "Neovim")
 
 This is my actually neovim configuration, what I am using for private and working development. You can use it as a base for
 your own neovim configuration.
@@ -57,7 +76,6 @@ Leader key = , (Comma)
 | leader + xr					|  refresh the active list																																|
 | leader + xw					|	 switch to workspace diagnostics from the builtin LSP client														|
 | leader + xx					|  toggle Trouble window																																	|
-
 
 #### LSP
 | Shortcut						| Functionality																																						|
@@ -252,6 +270,9 @@ Here I list all used plugins with links to the corresponding documentation.
 
 - [focus.nvim](https://github.com/beauwilliams/focus.nvim)
 	Auto-Focusing and Auto-Resizing Splits/Windows for Neovim
+
+- [dressing.nvim](https://github.com/stevearc/dressing.nvim)
+	Neovim plugin to improve the default vim.ui interfaces
 
 - [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
 	Snippet Engine for Neovim written in Lua.

@@ -189,11 +189,22 @@ return require('packer').startup(function(use)
 	use 'gpanders/editorconfig.nvim'
 
 	-- Auto-Focusing and Auto-Resizing Splits/Windows for Neovim
-	use { "beauwilliams/focus.nvim", config = function() require("focus").setup() end }
+	use {
+		'beauwilliams/focus.nvim',
+		config = function() require('focus').setup() end
+	}
 
 	-- A simple wrapper around git worktree operations, create, switch, and delete.
 	use { 'ThePrimeagen/git-worktree.nvim' }
 
+	-- Neovim plugin to improve the default vim.ui interfaces
+	use {
+		'stevearc/dressing.nvim',
+		config = function() require('dressing').setup() end
+	}
+
+	-- collaborative editing in Neovim using built-in capabilities
+	use { 'jbyuki/instant.nvim' }
 	-- Snippets
 	use { -- Snippet Engine for Neovim written in Lua.
 		'L3MON4D3/LuaSnip',
