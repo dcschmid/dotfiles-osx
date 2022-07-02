@@ -77,24 +77,6 @@ return require('packer').startup(function(use)
 		requires = 'nvim-lua/plenary.nvim'
 	}
 
-	use 'github/copilot.vim' -- Neovim plugin for GitHub Copilot
-
-	use { -- Lua plugin for starting and interacting with github copilot
-		'zbirenbaum/copilot.lua',
-		event = { 'VimEnter' },
-		config = function()
-			vim.defer_fn(function()
-				require('copilot').setup()
-			end, 100)
-		end,
-	}
-
-	use { -- Lua plugin to turn github copilot into a cmp source
-		'zbirenbaum/copilot-cmp',
-		after = { 'copilot.lua', 'nvim-cmp' },
-	}
-
-
 	-- Telescope
 	use { -- Find, Filter, Preview, Pick. All lua, all the time.
 		'nvim-telescope/telescope.nvim',

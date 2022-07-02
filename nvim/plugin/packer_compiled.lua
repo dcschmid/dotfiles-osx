@@ -131,29 +131,6 @@ _G.packer_plugins = {
     path = "/Users/danielschmid/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  ["copilot-cmp"] = {
-    load_after = {
-      ["copilot.lua"] = true
-    },
-    loaded = false,
-    needs_bufread = false,
-    path = "/Users/danielschmid/.local/share/nvim/site/pack/packer/opt/copilot-cmp",
-    url = "https://github.com/zbirenbaum/copilot-cmp"
-  },
-  ["copilot.lua"] = {
-    after = { "copilot-cmp" },
-    config = { "\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fcopilot\frequire-\1\0\4\0\3\0\0066\0\0\0009\0\1\0003\2\2\0)\3d\0B\0\3\1K\0\1\0\0\rdefer_fn\bvim\0" },
-    loaded = false,
-    needs_bufread = false,
-    only_cond = false,
-    path = "/Users/danielschmid/.local/share/nvim/site/pack/packer/opt/copilot.lua",
-    url = "https://github.com/zbirenbaum/copilot.lua"
-  },
-  ["copilot.vim"] = {
-    loaded = true,
-    path = "/Users/danielschmid/.local/share/nvim/site/pack/packer/start/copilot.vim",
-    url = "https://github.com/github/copilot.vim"
-  },
   ["diffview.nvim"] = {
     loaded = true,
     path = "/Users/danielschmid/.local/share/nvim/site/pack/packer/start/diffview.nvim",
@@ -227,9 +204,10 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["nvim-cmp"] = {
-    after = { "copilot-cmp" },
+    config = { " require('plugins/cmp') " },
     loaded = true,
-    only_config = true
+    path = "/Users/danielschmid/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-lsp-installer"] = {
     loaded = true,
@@ -274,7 +252,7 @@ _G.packer_plugins = {
     url = "https://github.com/wbthomason/packer.nvim"
   },
   ["persisted.nvim"] = {
-    config = { "\27LJ\2\n<\0\0\4\0\4\0\0066\0\0\0006\2\1\0009\2\2\2'\3\3\0B\0\3\1K\0\1\0\19bufdo bwipeout\bcmd\bvim\npcallJ\0\1\6\0\5\0\b6\1\0\0006\3\1\0009\3\2\3'\4\3\0009\5\4\0&\4\5\4B\1\3\1K\0\1\0\vbranch\18git checkout \bcmd\bvim\npcallß\1\1\0\5\0\v\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0003\4\4\0=\4\6\0033\4\a\0=\4\b\3=\3\t\2B\0\2\0016\0\0\0'\2\t\0B\0\2\0029\0\n\0'\2\1\0B\0\2\1K\0\1\0\19load_extension\14telescope\17after_source\0\18before_source\1\0\0\0\1\0\4\fcommand\16VimLeavePre\rautoload\2\rautosave\2\19use_git_branch\2\nsetup\14persisted\frequire\0" },
+    config = { "\27LJ\2\n<\0\0\4\0\4\0\0066\0\0\0006\2\1\0009\2\2\2'\3\3\0B\0\3\1K\0\1\0\19bufdo bwipeout\bcmd\bvim\npcallJ\0\1\6\0\5\0\b6\1\0\0006\3\1\0009\3\2\3'\4\3\0009\5\4\0&\4\5\4B\1\3\1K\0\1\0\vbranch\18git checkout \bcmd\bvim\npcallß\1\1\0\5\0\v\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0003\4\4\0=\4\6\0033\4\a\0=\4\b\3=\3\t\2B\0\2\0016\0\0\0'\2\t\0B\0\2\0029\0\n\0'\2\1\0B\0\2\1K\0\1\0\19load_extension\14telescope\17after_source\0\18before_source\1\0\0\0\1\0\4\rautosave\2\19use_git_branch\2\fcommand\16VimLeavePre\rautoload\2\nsetup\14persisted\frequire\0" },
     loaded = true,
     path = "/Users/danielschmid/.local/share/nvim/site/pack/packer/start/persisted.nvim",
     url = "https://github.com/olimorris/persisted.nvim"
@@ -318,54 +296,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: jester
-time([[Config for jester]], true)
- require('plugins/jester') 
-time([[Config for jester]], false)
--- Config for: persisted.nvim
-time([[Config for persisted.nvim]], true)
-try_loadstring("\27LJ\2\n<\0\0\4\0\4\0\0066\0\0\0006\2\1\0009\2\2\2'\3\3\0B\0\3\1K\0\1\0\19bufdo bwipeout\bcmd\bvim\npcallJ\0\1\6\0\5\0\b6\1\0\0006\3\1\0009\3\2\3'\4\3\0009\5\4\0&\4\5\4B\1\3\1K\0\1\0\vbranch\18git checkout \bcmd\bvim\npcallß\1\1\0\5\0\v\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0003\4\4\0=\4\6\0033\4\a\0=\4\b\3=\3\t\2B\0\2\0016\0\0\0'\2\t\0B\0\2\0029\0\n\0'\2\1\0B\0\2\1K\0\1\0\19load_extension\14telescope\17after_source\0\18before_source\1\0\0\0\1\0\4\fcommand\16VimLeavePre\rautoload\2\rautosave\2\19use_git_branch\2\nsetup\14persisted\frequire\0", "config", "persisted.nvim")
-time([[Config for persisted.nvim]], false)
--- Config for: nvim-cmp
-time([[Config for nvim-cmp]], true)
- require('plugins/cmp') 
-time([[Config for nvim-cmp]], false)
--- Config for: git-conflict.nvim
-time([[Config for git-conflict.nvim]], true)
-try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\17git-conflict\frequire\0", "config", "git-conflict.nvim")
-time([[Config for git-conflict.nvim]], false)
--- Config for: Comment.nvim
-time([[Config for Comment.nvim]], true)
-try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
-time([[Config for Comment.nvim]], false)
--- Config for: lualine.nvim
-time([[Config for lualine.nvim]], true)
- require('plugins/lualine') 
-time([[Config for lualine.nvim]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
- require('plugins/treesitter') 
-time([[Config for nvim-treesitter]], false)
--- Config for: dressing.nvim
-time([[Config for dressing.nvim]], true)
-try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rdressing\frequire\0", "config", "dressing.nvim")
-time([[Config for dressing.nvim]], false)
--- Config for: LuaSnip
-time([[Config for LuaSnip]], true)
- require('plugins/luasnip') 
-time([[Config for LuaSnip]], false)
--- Config for: git.nvim
-time([[Config for git.nvim]], true)
- require('plugins/git') 
-time([[Config for git.nvim]], false)
--- Config for: sort.nvim
-time([[Config for sort.nvim]], true)
-try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\tsort\frequire\0", "config", "sort.nvim")
-time([[Config for sort.nvim]], false)
--- Config for: focus.nvim
-time([[Config for focus.nvim]], true)
-try_loadstring("\27LJ\2\n3\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\nfocus\frequire\0", "config", "focus.nvim")
-time([[Config for focus.nvim]], false)
 -- Config for: nvim-lspconfig
 time([[Config for nvim-lspconfig]], true)
  require('plugins/lspconfig') 
@@ -374,13 +304,54 @@ time([[Config for nvim-lspconfig]], false)
 time([[Config for lspkind.nvim]], true)
  require('plugins/lspkind') 
 time([[Config for lspkind.nvim]], false)
-vim.cmd [[augroup packer_load_aucmds]]
-vim.cmd [[au!]]
-  -- Event lazy-loads
-time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au VimEnter * ++once lua require("packer.load")({'copilot.lua'}, { event = "VimEnter *" }, _G.packer_plugins)]]
-time([[Defining lazy-load event autocommands]], false)
-vim.cmd("augroup END")
+-- Config for: jester
+time([[Config for jester]], true)
+ require('plugins/jester') 
+time([[Config for jester]], false)
+-- Config for: lualine.nvim
+time([[Config for lualine.nvim]], true)
+ require('plugins/lualine') 
+time([[Config for lualine.nvim]], false)
+-- Config for: git.nvim
+time([[Config for git.nvim]], true)
+ require('plugins/git') 
+time([[Config for git.nvim]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+ require('plugins/treesitter') 
+time([[Config for nvim-treesitter]], false)
+-- Config for: nvim-cmp
+time([[Config for nvim-cmp]], true)
+ require('plugins/cmp') 
+time([[Config for nvim-cmp]], false)
+-- Config for: LuaSnip
+time([[Config for LuaSnip]], true)
+ require('plugins/luasnip') 
+time([[Config for LuaSnip]], false)
+-- Config for: focus.nvim
+time([[Config for focus.nvim]], true)
+try_loadstring("\27LJ\2\n3\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\nfocus\frequire\0", "config", "focus.nvim")
+time([[Config for focus.nvim]], false)
+-- Config for: persisted.nvim
+time([[Config for persisted.nvim]], true)
+try_loadstring("\27LJ\2\n<\0\0\4\0\4\0\0066\0\0\0006\2\1\0009\2\2\2'\3\3\0B\0\3\1K\0\1\0\19bufdo bwipeout\bcmd\bvim\npcallJ\0\1\6\0\5\0\b6\1\0\0006\3\1\0009\3\2\3'\4\3\0009\5\4\0&\4\5\4B\1\3\1K\0\1\0\vbranch\18git checkout \bcmd\bvim\npcallß\1\1\0\5\0\v\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0003\4\4\0=\4\6\0033\4\a\0=\4\b\3=\3\t\2B\0\2\0016\0\0\0'\2\t\0B\0\2\0029\0\n\0'\2\1\0B\0\2\1K\0\1\0\19load_extension\14telescope\17after_source\0\18before_source\1\0\0\0\1\0\4\rautosave\2\19use_git_branch\2\fcommand\16VimLeavePre\rautoload\2\nsetup\14persisted\frequire\0", "config", "persisted.nvim")
+time([[Config for persisted.nvim]], false)
+-- Config for: sort.nvim
+time([[Config for sort.nvim]], true)
+try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\tsort\frequire\0", "config", "sort.nvim")
+time([[Config for sort.nvim]], false)
+-- Config for: dressing.nvim
+time([[Config for dressing.nvim]], true)
+try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rdressing\frequire\0", "config", "dressing.nvim")
+time([[Config for dressing.nvim]], false)
+-- Config for: Comment.nvim
+time([[Config for Comment.nvim]], true)
+try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
+time([[Config for Comment.nvim]], false)
+-- Config for: git-conflict.nvim
+time([[Config for git-conflict.nvim]], true)
+try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\17git-conflict\frequire\0", "config", "git-conflict.nvim")
+time([[Config for git-conflict.nvim]], false)
 if should_profile then save_profiles() end
 
 end)
