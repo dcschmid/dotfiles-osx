@@ -37,9 +37,9 @@ set.scrolloff      = 1 -- when scrolling, keep cursor 1 lines away from screen b
 set.sidescrolloff  = 2 -- keep 30 columns visible left and right of the cursor at all times
 set.backspace      = 'indent,start,eol' -- make backspace behave like normal again
 set.updatetime     = 500 -- CursorHold interval
-set.softtabstop    = 2
-set.shiftwidth     = 2 -- spaces per tab (when shifting), when using the >> or << commands, shift lines by 4 spaces
-set.tabstop        = 2 -- spaces per tab
+set.softtabstop    = 4
+set.shiftwidth     = 4 -- spaces per tab (when shifting), when using the >> or << commands, shift lines by 4 spaces
+set.tabstop        = 4 -- spaces per tab
 set.smarttab       = true -- <tab>/<BS> indent/dedent in leading whitespace
 set.autoindent     = true -- maintain indent of current line
 set.expandtab      = false -- don't expand tabs into spaces
@@ -116,7 +116,7 @@ set.lazyredraw = true
 cmd([[au BufEnter * set fo-=c fo-=r fo-=o]])
 -- completion options
 set.completeopt = 'menuone,noselect,noinsert'
--- 2 spaces for selected filetypes
-cmd([[ autocmd FileType xml,html,xhtml,css,scss,javascript,lua,dart setlocal shiftwidth=2 tabstop=2 ]])
+-- 4 spaces for selected filetypes
+cmd([[ autocmd FileType xml,html,xhtml,css,scss,javascript,lua,dart setlocal shiftwidth=4 tabstop=4 ]])
 -- Fix eslint errors on save
 cmd([[ autocmd BufWritePre *.tsx,*.ts,*.jsx,*.js EslintFixAll ]])

@@ -224,15 +224,6 @@ Here I list all used plugins with links to the corresponding documentation.
 - [cmp-git](https://github.com/petertriho/cmp-git)
 	Git source for nvim-cmp
 
-- [copilot.vim](https://github.com/github/copilot.vim)
-	Neovim plugin for GitHub Copilot
-
-- [copilot.lua](https://github.com/zbirenbaum/copilot.lua)
-	Lua plugin for starting and interacting with github copilot
-
-- [copilot-cmp](https://github.com/zbirenbaum/copilot-cmp)
-	Lua plugin to turn github copilot into a cmp source
-
 #### Telescope
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 	Find, Filter, Preview, Pick. All lua, all the time.
@@ -281,6 +272,9 @@ Here I list all used plugins with links to the corresponding documentation.
 
 - [dressing.nvim](https://github.com/stevearc/dressing.nvim)
 	Neovim plugin to improve the default vim.ui interfaces
+
+- [AutoSave.nvim](https://github.com/Pocco81/AutoSave.nvim)
+  🦴 A NeoVim plugin for saving your work before the world collapses or you type :qa!
 
 - [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
 	Snippet Engine for Neovim written in Lua.

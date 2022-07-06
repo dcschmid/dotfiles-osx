@@ -185,8 +185,15 @@ return require('packer').startup(function(use)
 		config = function() require('dressing').setup() end
 	}
 
+	-- A NeoVim plugin for saving your work before the world collapses or you type :qa!
+	use {
+		'Pocco81/AutoSave.nvim',
+		config = [[ require('plugins/autosave') ]],
+	}
+
 	-- collaborative editing in Neovim using built-in capabilities
 	use { 'jbyuki/instant.nvim' }
+
 	-- Snippets
 	use { -- Snippet Engine for Neovim written in Lua.
 		'L3MON4D3/LuaSnip',
@@ -196,6 +203,23 @@ return require('packer').startup(function(use)
 		config = [[ require('plugins/luasnip') ]],
 	}
 
+
+	use {
+		'KadoBOT/nvim-spotify',
+		requires = 'nvim-telescope/telescope.nvim',
+		config = function()
+			local spotify = require 'nvim-spotify'
+
+			spotify.setup {
+				-- default opts
+				status = {
+					update_interval = 10000, -- the interval (ms) to check for what's currently playing
+					format = '%s %t by %a' -- spotify-tui --format argument
+				}
+			}
+		end,
+		run = 'make'
+	}
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
