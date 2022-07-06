@@ -148,17 +148,33 @@ Leader key = , (Comma)
 | leader + sw					|  search for selected word    																														|
 
 
-### Used Pluginss
+### Used Plugins
 Here I list all used plugins with links to the corresponding documentation.
 
 #### Plugin Management
 - [Packer](https://github.com/wbthomason/packer.nvim):
-	A use-package inspired plugin manager for Neovim. Uses native packages,
-	supports Luarocks dependencies, written in Lua, allows for expressive config
+  A use-package inspired plugin manager for Neovim. Uses native packages,
+  supports Luarocks dependencies, written in Lua, allows for expressive config
+
+  *Commands*:
+  - :PackerCompile
+    Regenerate compiled loader file
+
+  - :PackerClean
+    Remove any disabled or unused plugins
+
+  - :PackerInstall
+	Clean, then install missing plugins
+
+  - :PackerUpdate
+	Clean, then update and install plugins
+
+  - :PackerSync
+  Perform `PackerUpdate` and then `PackerCompile`
 
 #### Theme
 - [tokyonight.nvim](https://github.com/folke/tokyonight.nvim):
-	A clean, dark Neovim theme written in Lua, with support for lsp, treesitter and lots of plugins.
+  A clean, dark Neovim theme written in Lua, with support for lsp, treesitter and lots of plugins.
 
 #### Statusline
 - [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
@@ -167,6 +183,25 @@ Here I list all used plugins with links to the corresponding documentation.
 #### LSP
 - [nvim-lsp-installer](https://github.com/williamboman/nvim-lsp-installer)
   Neovim plugin that allows you to seamlessly manage LSP servers with :LspInstall
+
+  *Commands*:
+  - :LspInstallInfo
+	opens a graphical overview of your language servers
+
+  - :LspInstall [--sync] [server] ...
+    installs/reinstalls language servers. Runs in a blocking fashion if the --sync argument is passed (only recommended for scripting purposes).
+
+  - :LspUninstall [--sync] <server> ...
+     uninstalls language servers. Runs in a blocking fashion if the --sync argument is passed (only recommended for scripting purposes).
+
+  - :LspUninstallAll [--no-confirm]
+     uninstalls all language servers
+
+  - :LspInstallLog
+    opens the log file in a new tab window
+
+  - :LspPrintInstalled
+    prints all installed language servers
 
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 	Quickstart configurations for the Nvim LSP client
