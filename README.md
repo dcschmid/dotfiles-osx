@@ -158,19 +158,24 @@ Here I list all used plugins with links to the corresponding documentation.
 
   *Commands*:
   - :PackerCompile
-    Regenerate compiled loader file
+
+   Regenerate compiled loader file
 
   - :PackerClean
-    Remove any disabled or unused plugins
+
+	Remove any disabled or unused plugins
 
   - :PackerInstall
+
 	Clean, then install missing plugins
 
   - :PackerUpdate
+
 	Clean, then update and install plugins
 
   - :PackerSync
-  Perform `PackerUpdate` and then `PackerCompile`
+
+	Perform `PackerUpdate` and then `PackerCompile`
 
 #### Theme
 - [tokyonight.nvim](https://github.com/folke/tokyonight.nvim):
@@ -186,22 +191,28 @@ Here I list all used plugins with links to the corresponding documentation.
 
   *Commands*:
   - :LspInstallInfo
+
 	opens a graphical overview of your language servers
 
   - :LspInstall [--sync] [server] ...
-    installs/reinstalls language servers. Runs in a blocking fashion if the --sync argument is passed (only recommended for scripting purposes).
+
+	installs/reinstalls language servers. Runs in a blocking fashion if the --sync argument is passed (only recommended for scripting purposes).
 
   - :LspUninstall [--sync] <server> ...
-     uninstalls language servers. Runs in a blocking fashion if the --sync argument is passed (only recommended for scripting purposes).
+
+	 uninstalls language servers. Runs in a blocking fashion if the --sync argument is passed (only recommended for scripting purposes).
 
   - :LspUninstallAll [--no-confirm]
-     uninstalls all language servers
+
+	 uninstalls all language servers
 
   - :LspInstallLog
-    opens the log file in a new tab window
+
+	opens the log file in a new tab window
 
   - :LspPrintInstalled
-    prints all installed language servers
+
+	prints all installed language servers
 
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 	Quickstart configurations for the Nvim LSP client
