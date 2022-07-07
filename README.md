@@ -77,15 +77,6 @@ Leader key = , (Comma)
 | leader + fg					|	 Search for a string in your current working directory and get results live as you type	|
 | leader + g					|  Searches for the string under your cursor in your current working directory						|
 
-#### Trouble
-| Shortcut						| Functionality																																						|
-| ------------------- | --------------------------------------------------------------------------------------- |
-| leader + xd					|  switch to document diagnostics from the builtin LSP client															|
-| leader + xr					|  refresh the active list																																|
-| leader + xw					|	 switch to workspace diagnostics from the builtin LSP client														|
-| leader + xx					|  toggle Trouble window																																	|
-
-
 #### Comment
 | Shortcut						| Functionality																																						|
 | ------------------- | --------------------------------------------------------------------------------------- |
@@ -223,9 +214,15 @@ brew install lua-language-server go rust-analyser
 - [trouble.nvim](https://github.com/folke/trouble.nvim)
 	🚦A pretty diagnostics, references, telescope results, quickfix and location list to help you solve all the trouble your code is causing.
 
+	| Shortcut			| Functionality																																						|
+	| ----------------- | ------------------------------------------------------------- |
+	| leader + xd	    |  switch to document diagnostics from the builtin LSP client	|
+	| leader + xr		|  refresh the active list										|
+	| leader + xw		|  switch to workspace diagnostics from the builtin LSP client	|
+	| leader + xx		|  toggle Trouble window	   								    |
 
 - [schemastore.nvim](https://github.com/b0o/SchemaStore.nvim)
-	🛍  JSON schemas fo Neovim
+	🛍  JSON schemas fr Neovim
 
 #### Treesitter
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
