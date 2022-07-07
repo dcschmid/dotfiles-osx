@@ -37,7 +37,6 @@ return require('packer').startup(function(use)
 
 	use { -- vscode-like pictograms for neovim lsp completion items.
 		'onsails/lspkind.nvim',
-		config = [[ require('plugins/lspkind') ]],
 	}
 
 	use { -- JSON schemas for Neovim

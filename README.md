@@ -28,7 +28,7 @@ your own neovim configuration.
 ### How to install
 
 ```
-$ brew install git curl wget neovim lua-language-server ripgrep fd fzf gnu-sed cmake rust-analyser gh go ms-jpq/sad/sad git-delta eslint
+$ brew install git curl wget neovim ripgrep fd fzf gnu-sed cmake gh ms-jpq/sad/sad git-delta eslint
 
 $(brew --prefix)/opt/fzf/install
 ```
@@ -85,26 +85,6 @@ Leader key = , (Comma)
 | leader + xw					|	 switch to workspace diagnostics from the builtin LSP client														|
 | leader + xx					|  toggle Trouble window																																	|
 
-#### LSP
-| Shortcut						| Functionality																																						|
-| ------------------- | --------------------------------------------------------------------------------------- |
-| K										|  Displays hover information about the symbol under the cursor in a floating window. 		|
-| [ + d					      |  Move to the previous diagnostic in the current buffer.																	|
-| ] + d					      |  Move to the next diagnostic.																														|
-| control + k					|  Displays signature information about the symbol under the cursor in a floating window. |
-| gD							  	|  Jumps to the declaration of the symbol under the cursor.																|
-| gd								  |  Jumps to the definition of the symbol under the cursor.																|
-| gi									|  Lists all the implementations for the symbol under the cursor in the quickfix window. 	|
-| gr									|  Lists all the references to the symbol under the cursor in the quickfix window.				|
-| leader + gi 				|  Rename TypeScript file and update imports																							|
-| leader + go 				|  Import all missing imports in TS Files																									|
-| leader + gs 				|  Organize imports in TypeScript Files																										|
-| space + ca					|  Selects a code action available at the current cursor position.												|
-| space + d						|  Jumps to the definition of the type of the symbol under the cursor.										|
-| space + e					  |  Show diagnostics in a floating window.																									|
-| space + f 					|  Formats the current buffer																															|
-| space + q					  |  Add buffer diagnostics to the location list.																						|
-| space + rn					|  Renames all references to the symbol under the cursor.																	|
 
 #### Comment
 | Shortcut						| Functionality																																						|
@@ -141,7 +121,6 @@ Leader key = , (Comma)
 #### Tools
 | Shortcut						| Functionality																																						|
 | ------------------- | --------------------------------------------------------------------------------------- |
-| leader + el					|  run EslintFixAll																																				|
 | leader + s					|  open search panel    																																	|
 | leader + sm					|  open saved session list																																|
 | leader + so					|  sort visual selection																																	|
@@ -158,11 +137,11 @@ Here I list all used plugins with links to the corresponding documentation.
 
 	| Command			  | Functionality										|
 	| ------------------- | --------------------------------------------------- |
-	| :PackerCompile	  |  Regenerate compiled loader file				    |
 	| :PackerClean		  |  Remove any disabled or unused plugins    		    |
+	| :PackerCompile	  |  Regenerate compiled loader file				    |
 	| :PackerInstall	  |  Clean, then install missing plugins				|
-	| :PackerUpdate		  |  Clean, then update and install plugins				|
 	| :PackerSync		  |  Perform `PackerUpdate` and then `PackerCompile`	|
+	| :PackerUpdate		  |  Clean, then update and install plugins				|
 
 #### Theme
 - [tokyonight.nvim](https://github.com/folke/tokyonight.nvim):
@@ -173,29 +152,77 @@ Here I list all used plugins with links to the corresponding documentation.
   A blazing fast and easy to configure neovim statusline plugin written in pure lua.
 
 #### LSP
+
+The following [LSPs](https://microsoft.github.io/language-server-protocol/) i used the most of the time and are
+configured in this dotfile.
+
+- [astro](https://github.com/withastro/language-tools/tree/main/packages/language-server)
+- [cssls](https://github.com/hrsh7th/vscode-langservers-extracted)
+- [cssmodules_ls](https://github.com/antonk52/cssmodules-language-server)
+- [eslint](https://github.com/hrsh7th/vscode-langservers-extracted)
+- [gopls](https://github.com/golang/tools/tree/master/gopls)
+- [html](https://github.com/hrsh7th/vscode-langservers-extracted)
+- [jsonls](https://github.com/hrsh7th/vscode-langservers-extracted)
+- [rust_analyzer](https://github.com/rust-lang/rust-analyzer)
+- [sumneko_lua](https://github.com/sumneko/lua-language-server)
+- [svelte](https://github.com/sveltejs/language-tools/tree/master/packages/language-server)
+- [tailwindcss](https://github.com/tailwindlabs/tailwindcss-intellisense)
+- [tsserver](https://github.com/typescript-language-server/typescript-language-server)
+- [vuels](https://github.com/vuejs/vetur/tree/master/server)
+
+For running the sumneko_lua LSP, gopls and rust_analyzer, we must first install the following packages with homebrew.
+
+```
+brew install lua-language-server go rust-analyser
+```
+
 - [nvim-lsp-installer](https://github.com/williamboman/nvim-lsp-installer)
 	Neovim plugin that allows you to seamlessly manage LSP servers with :LspInstall
 
 	| Command							| Functionality																																	|
 	| --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-	| :LspInstallInfo					| opens a graphical overview of your language servers																							|
-	| :LspInstall [--sync] [server]		| installs/reinstalls language servers. Runs in a blocking fashion if the --sync argument is passed (only recommended for scripting purposes).  |
-	| :LspUninstall [--sync] <server>	|  uninstalls language servers. Runs in a blocking fashion if the --sync argument is passed (only recommended for scripting purposes).			|
-	| :LspUninstallAll [--no-confirm]	|  uninstalls all language servers																												|
+	| :LspInstall [--sync] [server]		|  installs/reinstalls language servers. Runs in a blocking fashion if the --sync argument is passed (only recommended for scripting purposes).  |
+	| :LspInstallInfo					|  opens a graphical overview of your language servers																							|
 	| :LspInstallLog					|  opens the log file in a new tab window																										|
 	| :LspPrintInstalled				|  prints all installed language servers																										|
+	| :LspUninstall [--sync] <server>	|  uninstalls language servers. Runs in a blocking fashion if the --sync argument is passed (only recommended for scripting purposes).			|
+	| :LspUninstallAll [--no-confirm]	|  uninstalls all language servers																												|
 
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 	Quickstart configurations for the Nvim LSP client
 
+	| Command/Shortcut	  | Functionality										                                   |
+	| ------------------- | -------------------------------------------------------------------------------------- |
+	| K					  | Displays hover information about the symbol under the cursor in a floating window.	   |
+	| [ + d				  | Move to the previous diagnostic in the current buffer.    		                       |
+	| ] + d	              | Move to the next diagnostic.				                                           |
+	| control + k		  | Displays signature information about the symbol under the cursor in a floating window  |
+	| gD		          | Jumps to the declaration of the symbol under the cursor.	                           |
+	| gd		          | Jumps to the definition of the symbol under the cursor.	                               |
+	| gi		          | Lists all the implementations for the symbol under the cursor in the quickfix window.  |
+	| gr		          | Lists all the references to the symbol under the cursor in the quickfix window.	       |
+	| leader + el		  | run EslintFixAll						   											   |
+	| space + ca		  | Selects a code action available at the current cursor position. 	                   |
+	| space + d		      | Jumps to the definition of the type of the symbol under the cursor. 	               |
+	| space + e		      | Show diagnostics in a floating window. 	                                               |
+	| space + f		      | Add buffer diagnostics to the location list. 	                                       |
+	| space + rn		  | Renames all references to the symbol under the cursor. 	                               |
+
 - [nvim-lsp-ts-utils](https://github.com/jose-elias-alvarez/nvim-lsp-ts-utils)
-  Utilities to improve the TypeScript development experience for Neovim's built-in LSP client.
+	Utilities to improve the TypeScript development experience for Neovim's built-in LSP client.
+
+	| Shortcut		  | Functionality										|
+	| ----------------| --------------------------------------------------- |
+	| leader + gi 	  |  Rename TypeScript file and update imports			|
+	| leader + go 	  |  Import all missing imports in TS Files				|
+	| leader + gs 	  |  Organize imports in TypeScript Files               |
 
 - [lspkind.nvim](https://github.com/onsails/lspkind.nvim)
 	vscode-like pictograms for neovim lsp completion items
 
 - [trouble.nvim](https://github.com/folke/trouble.nvim)
 	🚦A pretty diagnostics, references, telescope results, quickfix and location list to help you solve all the trouble your code is causing.
+
 
 - [schemastore.nvim](https://github.com/b0o/SchemaStore.nvim)
 	🛍  JSON schemas fo Neovim
