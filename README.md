@@ -68,22 +68,7 @@ Leader key = , (Comma)
 | leader + to					|  close other tabs                               |
 | leader + tp					|  switch to previous tab			 	                  |
 
-#### Telescope
-| Shortcut						| Functionality																																						|
-| ------------------- | --------------------------------------------------------------------------------------- |
-| ;										|  Lists open buffers in current neovim instance																					|
-| control + g					|  Fuzzy search through the output of git ls-files command																|
-| control + p					|  Lists files in your current working directory																					|
-| leader + fg					|	 Search for a string in your current working directory and get results live as you type	|
-| leader + g					|  Searches for the string under your cursor in your current working directory						|
 
-#### Comment
-| Shortcut						| Functionality																																						|
-| ------------------- | --------------------------------------------------------------------------------------- |
-| gb									| Toggles the region using blockwise comment in visual mode			      										|
-| gbc									| Toggles the current line using blockwise comment in normal mode													|
-| gc									| Toggles the region using linewise comment in visual mode      													|
-| gcc									| Toggles the current line using linewise comment in normal mode													|
 
 #### Git
 | Shortcut						| Functionality																																						|
@@ -205,11 +190,8 @@ brew install lua-language-server go rust-analyser
 	| Shortcut		  | Functionality										|
 	| ----------------| --------------------------------------------------- |
 	| leader + gi 	  |  Rename TypeScript file and update imports			|
-	| leader + go 	  |  Import all missing imports in TS Files				|
+	| leader + go 	  | ^ Import all missing imports in TS Files				|
 	| leader + gs 	  |  Organize imports in TypeScript Files               |
-
-- [lspkind.nvim](https://github.com/onsails/lspkind.nvim)
-	vscode-like pictograms for neovim lsp completion items
 
 - [trouble.nvim](https://github.com/folke/trouble.nvim)
 	🚦A pretty diagnostics, references, telescope results, quickfix and location list to help you solve all the trouble your code is causing.
@@ -220,6 +202,9 @@ brew install lua-language-server go rust-analyser
 	| leader + xr		|  refresh the active list										|
 	| leader + xw		|  switch to workspace diagnostics from the builtin LSP client	|
 	| leader + xx		|  toggle Trouble window	   								    |
+
+- [lspkind.nvim](https://github.com/onsails/lspkind.nvim)
+	vscode-like pictograms for neovim lsp completion items
 
 - [schemastore.nvim](https://github.com/b0o/SchemaStore.nvim)
 	🛍  JSON schemas fr Neovim
@@ -269,6 +254,14 @@ brew install lua-language-server go rust-analyser
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 	Find, Filter, Preview, Pick. All lua, all the time.
 
+	| Shortcut		 | Functionality 				   														    |
+	| ---------------| ---------------------------------------------------------------------------------------- |
+	| ;				 |  Lists open buffers in current neovim instance	   									    |
+	| control + g	 |  Fuzzy search through the output of git ls-files command					   			    |
+	| control + p	 |  Lists files in your current working directory				  						    |
+	| leader + fg	 |	Search for a string in your current working directory and get results live as you type	|
+	| leader + g	 |  Searches for the string under your cursor in your current working directory				|
+
 - [nvim-telescope/telescope-fzf-native.nvim](https://github.com/nvim-telescope/telescope-fzf-native.nvim)
 	FZF sorter for telescope written in c
 
@@ -292,6 +285,13 @@ brew install lua-language-server go rust-analyser
 #### Tools
 - [Comment.nvim](https://github.com/numToStr/Comment.nvim)
 	Smart and powerful comment plugin for neovim. Supports treesitter, dot repeat, left-right/up-down motions, hooks, and more
+
+	| Shortcut	| Functionality																																						|
+	| ----------| --------------------------------------------------------------------|
+	| gb	    | Toggles the region using blockwise comment in visual mode			  |
+	| gbc	    | Toggles the current line using blockwise comment in normal mode	  |
+	| gc	    | Toggles the region using linewise comment in visual mode      	  |
+	| gcc	    | Toggles the current line using linewise comment in normal mode	  |
 
 - [nvim-spectre](https://github.com/nvim-pack/nvim-spectre)
 	Find the enemy and replace them with dark power.
