@@ -112,10 +112,6 @@ require 'lspconfig'.html.setup {
 	on_attach = on_attach,
 }
 
-require 'lspconfig'.eslint.setup {
-	on_attach = on_attach,
-}
-
 require 'lspconfig'.astro.setup {
 	on_attach = on_attach,
 }

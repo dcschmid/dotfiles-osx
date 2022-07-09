@@ -43,6 +43,11 @@ return require('packer').startup(function(use)
 		'b0o/schemastore.nvim'
 	}
 
+	-- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua.
+	use {
+		'jose-elias-alvarez/null-ls.nvim',
+		config = [[ require('plugins/formatting') ]]
+	}
 
 	-- Treesitter
 	use { -- Nvim Treesitter configurations and abstraction layer

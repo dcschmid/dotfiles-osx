@@ -81,7 +81,6 @@ k("n", "<leader>xx", "<cmd>TroubleToggle<cr>", { silent = true, noremap = true }
 k("n", "<leader>xr", "<cmd>TroubleRefresh<cr>", { silent = true, noremap = true }) -- refresh Trouble window
 k("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", { silent = true, noremap = true }) -- switch to document diagnostics from the builtin LSP client
 k("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", { silent = true, noremap = true }) -- switch to workspace diagnostics from the builtin LSP client
-k("n", "<leader>el", "<cmd>EslintFixAll<CR>", { silent = true, noremap = true })
 k("n", "<leader>s", "<cmd>lua require('spectre').open()<CR>", { silent = true, noremap = true }) -- open spectre
 k("n", "<leader>sw", "<cmd>lua require('spectre').open_visual({select_word=true})<CR>", { silent = true, noremap = true }) -- search current word
 k("n", "<leader>sp", "<cmd>lua require('spectre').open_file_search()<CR>", { silent = true, noremap = true }) -- search current word
@@ -119,5 +118,3 @@ cmd([[au BufEnter * set fo-=c fo-=r fo-=o]])
 set.completeopt = 'menuone,noselect,noinsert'
 -- 4 spaces for selected filetypes
 cmd([[ autocmd FileType xml,html,xhtml,css,scss,javascript,lua,dart setlocal shiftwidth=4 tabstop=4 ]])
--- Fix eslint errors on save
-cmd([[ autocmd BufWritePre *.tsx,*.ts,*.jsx,*.js EslintFixAll ]])
