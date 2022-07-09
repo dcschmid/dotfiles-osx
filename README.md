@@ -68,27 +68,6 @@ Leader key = , (Comma)
 | leader + to		  |  close other tabs                               |
 | leader + tp		  |  switch to previous tab			                |
 
-#### Git
-| Shortcut						| Functionality																																						|
-| ------------------- | --------------------------------------------------------------------------------------- |
-| :DiffviewClose	    | Close the current diffview. You can also use :tabclose																	|
-| :DiffviewFileHistory| Opens a new file history view that lists all commits that affected the given paths.			|
-| :DiffviewOpen	      | Open Git Diffview	Tab																					      										|
-| :DiffviewRefresh	  | Update stats and entries in the file list of the current Diffview												|
-| :Git								| run git command in terminal, Eg: :Git checkout -b test																	|
-| :GitConflictListQf	| Show all conflicted files in quickfix window									      										|
-| c0									| Select both none of the changes																      										|
-| cb									| Select both changes																						      										|
-| co									| Select the current changes				                  					      										|
-| ct									| Select the incoming changes																		      										|
-| leader + gR				  | Revert the current file to the specific commit																					|
-| leader + gb					| Open blame window																																				|
-| leader + gd				  | Opens a new diff that compares against the current index																|
-| leader + gn				  | Create a pull request with the target branch is set in the `target_branch` option				|
-| leader + go				  | Open file/folder in git repository																											|
-| leader + gp				  | Open pull request of the current branch																									|
-| leader + gr				  | Revert to the specific commit																														|
-| leader + gy				  | generate shareable file permalinks (with line ranges)																		|
 
 ### Used Plugins
 Here I list all used plugins with links to the corresponding documentation.
@@ -259,15 +238,45 @@ brew install lua-language-server go rust-analyser
 - [git.nvim](https://github.com/dinhhuy258/git.nvim)
 	git.nvim is the simple clone of the plugin vim-fugitive which is written in Lua.
 
+	| Shortcut		| Functionality																		|
+	| -------------	| --------------------------------------------------------------------------------- |
+	| :Git			| run git command in terminal, Eg: :Git checkout -b test							|
+	| leader + gR	| Revert the current file to the specific commit									|
+	| leader + gb	| Open blame window																	|
+	| leader + gd	| Opens a new diff that compares against the current index						    |
+	| leader + gn	| Create a pull request with the target branch is set in the `target_branch` option	|
+	| leader + go	| Open file/folder in git repository												|
+	| leader + gp	| Open pull request of the current branch											|
+	| leader + gr	| Revert to the specific commit														|
+
 - [gitlinker.nvim](https://github.com/ruifm/gitlinker.nvim)
 	A lua neovim plugin to generate shareable file permalinks (with line ranges) for several git web frontend hosts.
 	Inspired by tpope/vim-fugitive's :GBrowse
 
+	| Shortcut		| Functionality																																						|
+	| -------------	| --------------------------------------------------------------------|
+	| leader + gy	| generate shareable file permalinks (with line ranges)				  |
+
 - [diffview.nvim](https://github.com/sindrets/diffview.nvim)
 	Single tabpage interface for easily cycling through diffs for all modified files for any git rev.
 
+	| Shortcut			   | Functionality																			 |
+	| -------------------- | --------------------------------------------------------------------------------------- |
+	| :DiffviewClose	   | Close the current diffview. You can also use :tabclose							  		 |
+	| :DiffviewFileHistory | Opens a new file history view that lists all commits that affected the given paths.	 |
+	| :DiffviewOpen	       | Open Git Diffview Tab																	 |
+	| :DiffviewRefresh	   | Update stats and entries in the file list of the current Diffview						 |
+
 - [git-conflict.nvim](https://github.com/akinsho/git-conflict.nvim)
 	A plugin to visualise and resolve merge conflicts in neovim
+
+	| Command/Shortcut					| Functionality																																						|
+	| --------------------------------	| ------------------------------------------------------------|
+	| :GitConflictListQf				| Show all conflicted files in quickfix window	  			  |
+	| c0 or :GitConflictChooseNone		| Select both none of the changes							  |
+	| cb or :GitConflictChooseBoth		| Select both changes					  		  			  |
+	| co or :GitConflictChooseOurs		| Select the current changes				  				  |
+	| ct or :GitConflictChooseTheirs	| Select the incoming changes					  			  |
 
 - [git-worktree.nvim](https://github.com/ThePrimeagen/git-worktree.nvim)
 	A simple wrapper around git worktree operations, create, switch, and delete.
@@ -301,7 +310,7 @@ brew install lua-language-server go rust-analyser
 
 	| Shortcut		 | Functionality						|
 	| ---------------| ------------------------------------ |
-	| <cr>			 |  goto current file					|
+	| enter			 |  goto current file					|
 	| dd			 |  toggle current item					|
 	| leader + R	 |  replace all							|
 	| leader + c	 |  input replace vim command			|
