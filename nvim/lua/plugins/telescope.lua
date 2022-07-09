@@ -1,5 +1,10 @@
 require('telescope').setup {
 	extensions = {
+		["ui-select"] = {
+			require("telescope.themes").get_dropdown {
+				-- even more opts
+			},
+		},
 		fzf = {
 			fuzzy = true, -- false will only do exact matching
 			override_generic_sorter = true, -- override the generic sorter
@@ -12,3 +17,4 @@ require('telescope').setup {
 
 require("telescope").load_extension('git_worktree')
 require('telescope').load_extension('fzf')
+require("telescope").load_extension("ui-select")

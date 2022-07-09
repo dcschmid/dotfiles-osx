@@ -40,7 +40,7 @@ Leader key = , (Comma)
 | Shortcut      | Functionality                                   |
 | ------------- | ----------------------------------------------- |
 | -             |  open netrw file explorer                       |
-| leader + ba   |  close all the buffers		                      |
+| leader + ba   |  close all the buffers		                  |
 | leader + w    |  fast saving                                    |
 
 #### Split Management
@@ -52,23 +52,21 @@ Leader key = , (Comma)
 | control + l   |  Move to existing or create a new split to the right of your current window + open file or custom command      |
 
 #### Search
-| Shortcut						| Functionality                                   |
+| Shortcut			  | Functionality                                   |
 | ------------------- | ----------------------------------------------- |
 | control + space     |  backward search                                |
 | leader + space      |  remove search highlights                       |
-| space								|  search                                         |
+| space				  |  search                                         |
 
 #### Tab Management
-| Shortcut						| Functionality                                   |
+| Shortcut			  | Functionality                                   |
 | ------------------- | ----------------------------------------------- |
-| leader + nt					|  open new tab                                   |
-| leader + tc					|  close actual tab					                      |
-| leader + tl					|  toggle between this and the last accessed tab	|
-| leader + tn					|  switch to next tab						                  |
-| leader + to					|  close other tabs                               |
-| leader + tp					|  switch to previous tab			 	                  |
-
-
+| leader + nt		  |  open new tab                                   |
+| leader + tc		  |  close actual tab					            |
+| leader + tl		  |  toggle between this and the last accessed tab	|
+| leader + tn		  |  switch to next tab					            |
+| leader + to		  |  close other tabs                               |
+| leader + tp		  |  switch to previous tab			                |
 
 #### Git
 | Shortcut						| Functionality																																						|
@@ -90,18 +88,7 @@ Leader key = , (Comma)
 | leader + go				  | Open file/folder in git repository																											|
 | leader + gp				  | Open pull request of the current branch																									|
 | leader + gr				  | Revert to the specific commit																														|
-| leader + gw				  | To bring up the telescope window listing your workspaces																|
-| leader + gwn				| To bring up the telescope window to create a new worktree																|
 | leader + gy				  | generate shareable file permalinks (with line ranges)																		|
-
-#### Tools
-| Shortcut						| Functionality																																						|
-| ------------------- | --------------------------------------------------------------------------------------- |
-| leader + s					|  open search panel    																																	|
-| leader + sm					|  open saved session list																																|
-| leader + so					|  sort visual selection																																	|
-| leader + sw					|  search for selected word    																														|
-
 
 ### Used Plugins
 Here I list all used plugins with links to the corresponding documentation.
@@ -190,7 +177,7 @@ brew install lua-language-server go rust-analyser
 	| Shortcut		  | Functionality										|
 	| ----------------| --------------------------------------------------- |
 	| leader + gi 	  |  Rename TypeScript file and update imports			|
-	| leader + go 	  | ^ Import all missing imports in TS Files				|
+	| leader + go 	  | ^ Import all missing imports in TS Files			|
 	| leader + gs 	  |  Organize imports in TypeScript Files               |
 
 - [trouble.nvim](https://github.com/folke/trouble.nvim)
@@ -265,13 +252,16 @@ brew install lua-language-server go rust-analyser
 - [nvim-telescope/telescope-fzf-native.nvim](https://github.com/nvim-telescope/telescope-fzf-native.nvim)
 	FZF sorter for telescope written in c
 
+- [telescope-ui-select.nvim](https://github.com/nvim-telescope/telescope-ui-select.nvim)
+	It sets vim.ui.select to telescope. That means for example that neovim core stuff can fill the telescope picker.
+
 #### Git
+- [git.nvim](https://github.com/dinhhuy258/git.nvim)
+	git.nvim is the simple clone of the plugin vim-fugitive which is written in Lua.
+
 - [gitlinker.nvim](https://github.com/ruifm/gitlinker.nvim)
 	A lua neovim plugin to generate shareable file permalinks (with line ranges) for several git web frontend hosts.
 	Inspired by tpope/vim-fugitive's :GBrowse
-
-- [git.nvim](https://github.com/dinhhuy258/git.nvim)
-	git.nvim is the simple clone of the plugin vim-fugitive which is written in Lua.
 
 - [diffview.nvim](https://github.com/sindrets/diffview.nvim)
 	Single tabpage interface for easily cycling through diffs for all modified files for any git rev.
@@ -281,6 +271,11 @@ brew install lua-language-server go rust-analyser
 
 - [git-worktree.nvim](https://github.com/ThePrimeagen/git-worktree.nvim)
 	A simple wrapper around git worktree operations, create, switch, and delete.
+
+	| Shortcut		| Functionality																																						|
+	| -------------	| --------------------------------------------------------------------|
+	| leader + gw	| To bring up the telescope window listing your workspaces		   	  |
+	| leader + gwn	| To bring up the telescope window to create a new worktree			  |
 
 #### Tools
 - [Comment.nvim](https://github.com/numToStr/Comment.nvim)
@@ -296,14 +291,48 @@ brew install lua-language-server go rust-analyser
 - [nvim-spectre](https://github.com/nvim-pack/nvim-spectre)
 	Find the enemy and replace them with dark power.
 
-- [jester](https://github.com/David-Kunz/jester)
-	A Neovim plugin to easily run and debug Jest test
+	| Shortcut		 | Functionality			    |
+	| ---------------| ---------------------------- |
+	| leader + s	 |  open search panel    		|
+	| leader + sp	 |  search in current file		|
+	| leader + sw	 |  search for selected word    |
+
+	When the search panel is opend we can use the following shortcuts:
+
+	| Shortcut		 | Functionality						|
+	| ---------------| ------------------------------------ |
+	| <cr>			 |  goto current file					|
+	| dd			 |  toggle current item					|
+	| leader + R	 |  replace all							|
+	| leader + c	 |  input replace vim command			|
+	| leader + o	 |  show option							|
+	| leader + q	 |  send all item to quickfix			|
+	| leader + rc	 |  replace current line				|
+	| leader + v	 |  change result view mode				|
+	| th			 |  toggle search hidden				|
+	| ti			 |  toggle ignore case					|
+	| tu			 |  update change when vim write file	|
 
 - [persisted.nvim](https://github.com/olimorris/persisted.nvim)
 	Simple session management for Neovim with git branching, autosave/autoload and Telescope support
 
+	| Shortcut/Commands	 | Functionality																			|
+	| ------------------ | ---------------------------------------------------------------------------------------- |
+	| :SessionDelete	 |  Delete the current session																|
+	| :SessionLoad		 |  Load the session for the current directory and current branch if git_use_branch = true  |
+	| :SessionLoadLast	 |  Load the last session																	|
+	| :SessionSave		 |  Save the current session																|
+	| :SessionStart		 |  Start recording a session. Useful if autosave = false									|
+	| :SessionStop		 |  Stop recording a session																|
+	| :SessionToggle	 |  Determines whether to load, start or stop a session										|
+	| leader + sm		 |  open saved session list																	|
+
 - [sort.nvim](https://github.com/sQVe/sort.nvim)
 	Sorting plugin for Neovim that supports line-wise and delimiter sorting.
+
+	| Shortcut		 | Functionality			    |
+	| ---------------| ---------------------------- |
+	| leader + so	 | sort visual selection		|
 
 - [editorconfig.nvim](https://github.com/gpanders/editorconfig.nvim)
 	EditorConfig plugin for Neovim
@@ -313,9 +342,6 @@ brew install lua-language-server go rust-analyser
 
 - [dressing.nvim](https://github.com/stevearc/dressing.nvim)
 	Neovim plugin to improve the default vim.ui interfaces
-
-- [AutoSave.nvim](https://github.com/Pocco81/AutoSave.nvim)
-  🦴 A NeoVim plugin for saving your work before the world collapses or you type :qa!
 
 - [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
 	Snippet Engine for Neovim written in Lua.

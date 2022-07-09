@@ -76,6 +76,7 @@ return require('packer').startup(function(use)
 		requires = 'nvim-lua/plenary.nvim'
 	}
 
+
 	-- Telescope
 	use { -- Find, Filter, Preview, Pick. All lua, all the time.
 		'nvim-telescope/telescope.nvim',
@@ -86,6 +87,9 @@ return require('packer').startup(function(use)
 
 	-- FZF sorter for telescope written in c
 	use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+
+	-- It sets vim.ui.select to telescope. That means for example that neovim core stuff can fill the telescope picker.
+	use { 'nvim-telescope/telescope-ui-select.nvim' }
 
 
 	-- git
@@ -123,11 +127,6 @@ return require('packer').startup(function(use)
 
 	-- Find the enemy and replace them with dark power.
 	use 'windwp/nvim-spectre'
-
-	use { -- A Neovim plugin to easily run and debug Jest test
-		'David-Kunz/jester',
-		config = [[ require('plugins/jester') ]],
-	}
 
 	use({ -- Simple session management for Neovim with git branching, autosave/autoload and Telescope support
 		"olimorris/persisted.nvim",
@@ -182,12 +181,6 @@ return require('packer').startup(function(use)
 	use {
 		'stevearc/dressing.nvim',
 		config = function() require('dressing').setup() end
-	}
-
-	-- A NeoVim plugin for saving your work before the world collapses or you type :qa!
-	use {
-		'Pocco81/AutoSave.nvim',
-		config = [[ require('plugins/autosave') ]],
 	}
 
 	-- collaborative editing in Neovim using built-in capabilities

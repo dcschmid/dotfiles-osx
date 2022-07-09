@@ -84,6 +84,7 @@ k("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", { silent = t
 k("n", "<leader>el", "<cmd>EslintFixAll<CR>", { silent = true, noremap = true })
 k("n", "<leader>s", "<cmd>lua require('spectre').open()<CR>", { silent = true, noremap = true }) -- open spectre
 k("n", "<leader>sw", "<cmd>lua require('spectre').open_visual({select_word=true})<CR>", { silent = true, noremap = true }) -- search current word
+k("n", "<leader>sp", "<cmd>lua require('spectre').open_file_search()<CR>", { silent = true, noremap = true }) -- search current word
 k("n", "<leader>sm", "<cmd>Telescope persisted<CR>", { silent = true, noremap = true }) -- search current word
 k("v", "<leader>so", "<Esc><cmd>Sort<CR>", { silent = true, noremap = true }) -- search current word
 k("n", "<leader>gw", "[[:lua require('telescope').extensions.git_worktree.git_worktrees()<CR>]]",

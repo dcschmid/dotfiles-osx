@@ -69,12 +69,6 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["AutoSave.nvim"] = {
-    config = { " require('plugins/autosave') " },
-    loaded = true,
-    path = "/Users/danielschmid/.local/share/nvim/site/pack/packer/start/AutoSave.nvim",
-    url = "https://github.com/Pocco81/AutoSave.nvim"
-  },
   ["Comment.nvim"] = {
     config = { "\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0" },
     loaded = true,
@@ -191,12 +185,6 @@ _G.packer_plugins = {
     path = "/Users/danielschmid/.local/share/nvim/site/pack/packer/start/instant.nvim",
     url = "https://github.com/jbyuki/instant.nvim"
   },
-  jester = {
-    config = { " require('plugins/jester') " },
-    loaded = true,
-    path = "/Users/danielschmid/.local/share/nvim/site/pack/packer/start/jester",
-    url = "https://github.com/David-Kunz/jester"
-  },
   ["lspkind.nvim"] = {
     loaded = true,
     path = "/Users/danielschmid/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
@@ -236,7 +224,7 @@ _G.packer_plugins = {
     url = "https://github.com/windwp/nvim-spectre"
   },
   ["nvim-spotify"] = {
-    config = { "\27LJ\2\ny\0\0\5\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\4\0005\4\3\0=\4\5\3B\1\2\1K\0\1\0\vstatus\1\0\0\1\0\2\vformat\16%s %t by %a\20update_interval\3êN\nsetup\17nvim-spotify\frequire\0" },
+    config = { "\27LJ\2\ny\0\0\5\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\4\0005\4\3\0=\4\5\3B\1\2\1K\0\1\0\vstatus\1\0\0\1\0\2\20update_interval\3êN\vformat\16%s %t by %a\nsetup\17nvim-spotify\frequire\0" },
     loaded = true,
     path = "/Users/danielschmid/.local/share/nvim/site/pack/packer/start/nvim-spotify",
     url = "https://github.com/KadoBOT/nvim-spotify"
@@ -289,6 +277,11 @@ _G.packer_plugins = {
     path = "/Users/danielschmid/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
     url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
   },
+  ["telescope-ui-select.nvim"] = {
+    loaded = true,
+    path = "/Users/danielschmid/.local/share/nvim/site/pack/packer/start/telescope-ui-select.nvim",
+    url = "https://github.com/nvim-telescope/telescope-ui-select.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/danielschmid/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -307,10 +300,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: persisted.nvim
-time([[Config for persisted.nvim]], true)
-try_loadstring("\27LJ\2\n<\0\0\4\0\4\0\0066\0\0\0006\2\1\0009\2\2\2'\3\3\0B\0\3\1K\0\1\0\19bufdo bwipeout\bcmd\bvim\npcallJ\0\1\6\0\5\0\b6\1\0\0006\3\1\0009\3\2\3'\4\3\0009\5\4\0&\4\5\4B\1\3\1K\0\1\0\vbranch\18git checkout \bcmd\bvim\npcallﬂ\1\1\0\5\0\v\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0003\4\4\0=\4\6\0033\4\a\0=\4\b\3=\3\t\2B\0\2\0016\0\0\0'\2\t\0B\0\2\0029\0\n\0'\2\1\0B\0\2\1K\0\1\0\19load_extension\14telescope\17after_source\0\18before_source\1\0\0\0\1\0\4\fcommand\16VimLeavePre\rautoload\2\rautosave\2\19use_git_branch\2\nsetup\14persisted\frequire\0", "config", "persisted.nvim")
-time([[Config for persisted.nvim]], false)
+-- Config for: nvim-cmp
+time([[Config for nvim-cmp]], true)
+ require('plugins/cmp') 
+time([[Config for nvim-cmp]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+ require('plugins/treesitter') 
+time([[Config for nvim-treesitter]], false)
 -- Config for: git.nvim
 time([[Config for git.nvim]], true)
  require('plugins/git') 
@@ -325,16 +322,16 @@ try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K
 time([[Config for Comment.nvim]], false)
 -- Config for: nvim-spotify
 time([[Config for nvim-spotify]], true)
-try_loadstring("\27LJ\2\ny\0\0\5\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\4\0005\4\3\0=\4\5\3B\1\2\1K\0\1\0\vstatus\1\0\0\1\0\2\vformat\16%s %t by %a\20update_interval\3êN\nsetup\17nvim-spotify\frequire\0", "config", "nvim-spotify")
+try_loadstring("\27LJ\2\ny\0\0\5\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\4\0005\4\3\0=\4\5\3B\1\2\1K\0\1\0\vstatus\1\0\0\1\0\2\20update_interval\3êN\vformat\16%s %t by %a\nsetup\17nvim-spotify\frequire\0", "config", "nvim-spotify")
 time([[Config for nvim-spotify]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
- require('plugins/treesitter') 
-time([[Config for nvim-treesitter]], false)
--- Config for: nvim-cmp
-time([[Config for nvim-cmp]], true)
- require('plugins/cmp') 
-time([[Config for nvim-cmp]], false)
+-- Config for: nvim-lspconfig
+time([[Config for nvim-lspconfig]], true)
+ require('plugins/lspconfig') 
+time([[Config for nvim-lspconfig]], false)
+-- Config for: persisted.nvim
+time([[Config for persisted.nvim]], true)
+try_loadstring("\27LJ\2\n<\0\0\4\0\4\0\0066\0\0\0006\2\1\0009\2\2\2'\3\3\0B\0\3\1K\0\1\0\19bufdo bwipeout\bcmd\bvim\npcallJ\0\1\6\0\5\0\b6\1\0\0006\3\1\0009\3\2\3'\4\3\0009\5\4\0&\4\5\4B\1\3\1K\0\1\0\vbranch\18git checkout \bcmd\bvim\npcallﬂ\1\1\0\5\0\v\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0003\4\4\0=\4\6\0033\4\a\0=\4\b\3=\3\t\2B\0\2\0016\0\0\0'\2\t\0B\0\2\0029\0\n\0'\2\1\0B\0\2\1K\0\1\0\19load_extension\14telescope\17after_source\0\18before_source\1\0\0\0\1\0\4\fcommand\16VimLeavePre\rautoload\2\rautosave\2\19use_git_branch\2\nsetup\14persisted\frequire\0", "config", "persisted.nvim")
+time([[Config for persisted.nvim]], false)
 -- Config for: LuaSnip
 time([[Config for LuaSnip]], true)
  require('plugins/luasnip') 
@@ -355,18 +352,6 @@ time([[Config for sort.nvim]], false)
 time([[Config for dressing.nvim]], true)
 try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rdressing\frequire\0", "config", "dressing.nvim")
 time([[Config for dressing.nvim]], false)
--- Config for: nvim-lspconfig
-time([[Config for nvim-lspconfig]], true)
- require('plugins/lspconfig') 
-time([[Config for nvim-lspconfig]], false)
--- Config for: AutoSave.nvim
-time([[Config for AutoSave.nvim]], true)
- require('plugins/autosave') 
-time([[Config for AutoSave.nvim]], false)
--- Config for: jester
-time([[Config for jester]], true)
- require('plugins/jester') 
-time([[Config for jester]], false)
 if should_profile then save_profiles() end
 
 end)
