@@ -64,7 +64,7 @@ k('n', '<C-k>', [[:FocusSplitDown<CR>]], { noremap = true, silent = true }) -- C
 k('n', '<space>', [[/]], { noremap = true, silent = true }) -- search
 k('n', '<C-space>', [[?]], { noremap = true, silent = true }) -- backward search
 k('n', '<leader><space>', [[:nohlsearch<CR>]], { noremap = true, silent = true }) -- remove search highlight
-k('n', '<leader>ba', [[:bufdo]], { noremap = true, silent = true }) -- close all the buffers
+k('n', '<leader>ba', [[:w | %bd | e#]], { noremap = true, silent = true }) -- close all the buffers
 k('n', '<leader>nt', [[:tabnew<CR>]], { noremap = true, silent = true }) -- open new tab
 k('n', '<leader>to', [[:tabonly<CR>]], { noremap = true, silent = true }) -- close other tabs
 k('n', '<leader>tc', [[:tabclose<CR>]], { noremap = true, silent = true }) -- close tab
