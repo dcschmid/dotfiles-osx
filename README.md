@@ -187,6 +187,8 @@ brew install lua-language-server go rust-analyser
 
   You find a list of null-ls built-in sources [here](https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md).
 
+  For eslint_d: ```npm install -g eslint_d```
+
 - [lsp_lines.nvim](https://git.sr.ht/~whynothugo/lsp_lines.nvim)
   lsp_lines is a simple neovim plugin that renders diagnostics using virtual lines on top of the real line of code.
 

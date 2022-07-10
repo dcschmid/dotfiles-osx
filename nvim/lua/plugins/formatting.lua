@@ -10,14 +10,14 @@ null_ls.setup({
 		formatting.gofmt,
 		formatting.goimports,
 		formatting.prettier,
-		formatting.eslint,
+		formatting.eslint_d,
 		formatting.codespell.with({ filetypes = { "markdown" } }),
 
 		-- diagnostics
-		diagnostics.eslint,
+		diagnostics.eslint_d,
 
 		-- actions
-		action.eslint,
+		action.eslint_d,
 	},
 	on_attach = function(client)
 		if client.resolved_capabilities.document_formatting then
