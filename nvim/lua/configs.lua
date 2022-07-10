@@ -91,6 +91,10 @@ k("n", "<leader>gw", "[[:lua require('telescope').extensions.git_worktree.git_wo
 k("n", "<leader>gwn", "[[:lua require('telescope').extensions.git_worktree.create_git_worktree()<CR>]]",
 	{ silent = true, noremap = true }) -- search current word
 
+vim.diagnostic.config({
+	virtual_text = false,
+})
+
 -- highlight on yank
 exec([[
    augroup YankHighlight

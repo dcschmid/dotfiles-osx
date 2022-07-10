@@ -49,6 +49,14 @@ return require('packer').startup(function(use)
 		config = [[ require('plugins/formatting') ]]
 	}
 
+	use({
+		'https://git.sr.ht/~whynothugo/lsp_lines.nvim',
+		config = function()
+			require("lsp_lines").register_lsp_virtual_lines()
+		end,
+	})
+
+
 	-- Treesitter
 	use { -- Nvim Treesitter configurations and abstraction layer
 		'nvim-treesitter/nvim-treesitter',
