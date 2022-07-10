@@ -371,3 +371,6 @@ brew install lua-language-server go rust-analyser
 
 - [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
   Snippet Engine for Neovim written in Lua.
+
+### Cheatsheet
+[Neovim Cheetsheet](https://cheatography.com/dcschmid/cheat-sheets/personal-neovim-cheatsheet/)
