@@ -29,7 +29,7 @@ your own neovim configuration.
 ### How to install
 
 ```
-$ brew install git curl wget neovim ripgrep fd fzf gnu-sed cmake gh ms-jpq/sad/sad git-delta eslint
+$ brew install git curl wget neovim ripgrep fd fzf gnu-sed cmake gh ms-jpq/sad/sad git-delta
 
 $(brew --prefix)/opt/fzf/install
 ```
@@ -110,7 +110,6 @@ configured in this dotfile.
 - [astro](https://github.com/withastro/language-tools/tree/main/packages/language-server)
 - [cssls](https://github.com/hrsh7th/vscode-langservers-extracted)
 - [cssmodules_ls](https://github.com/antonk52/cssmodules-language-server)
-- [eslint](https://github.com/hrsh7th/vscode-langservers-extracted)
 - [gopls](https://github.com/golang/tools/tree/master/gopls)
 - [html](https://github.com/hrsh7th/vscode-langservers-extracted)
 - [jsonls](https://github.com/hrsh7th/vscode-langservers-extracted)
@@ -152,7 +151,6 @@ brew install lua-language-server go rust-analyser
   | gd               | Jumps to the definition of the symbol under the cursor.                               |
   | gi               | Lists all the implementations for the symbol under the cursor in the quickfix window. |
   | gr               | Lists all the references to the symbol under the cursor in the quickfix window.       |
-  | leader + el      | run EslintFixAll                                                                      |
   | space + ca       | Selects a code action available at the current cursor position.                       |
   | space + d        | Jumps to the definition of the type of the symbol under the cursor.                   |
   | space + e        | Show diagnostics in a floating window.                                                |
@@ -165,7 +163,7 @@ brew install lua-language-server go rust-analyser
   | Shortcut    | Functionality                             |
   | ----------- | ----------------------------------------- |
   | leader + gi | Rename TypeScript file and update imports |
-  | leader + go | ^ Import all missing imports in TS Files  |
+  | leader + go | Import all missing imports in TS Files    |
   | leader + gs | Organize imports in TypeScript Files      |
 
 - [trouble.nvim](https://github.com/folke/trouble.nvim)
